@@ -14,3 +14,23 @@ class MentorsList(ListView):
     model = Mentor
     queryset = Mentor.objects.filter(verified=True).order_by("-joined")
     template_name = "mentors-list.html"
+
+
+class MentorDetail(CreateView):
+    """
+    RENDER THE DETAILS PAGE OF THE SELECTED MENTOR
+    """
+    model = Mentor
+
+    def get(self, request, slug, *args, **kwargs):
+        model = Mentor
+        queryset = model.objects.filter(verified=True)
+        mentor = get_object_or_404(queryset, slug=slug)
+
+        return render(
+            request,
+            "mentor-detail.html",
+            {
+               "mentor": mentor,
+            },
+        )
