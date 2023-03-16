@@ -1,4 +1,10 @@
 {% extends "base.html" %} 
 {% block content %} 
-mentors list
+
+{% for mentor in object_list %}
+
+{{ mentor.name }}
+
+{% endfor %}
+
 {% endblock %}
