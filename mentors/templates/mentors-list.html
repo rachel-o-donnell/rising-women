@@ -1,4 +1,14 @@
 {% extends "base.html" %} 
 {% block content %} 
-mentors list
+
+{% for mentor in object_list %}
+
+<div style="margin-top:8em;">
+    <a href="{% url 'mentordetail' mentor.slug %}" class="post-link">
+        {{ mentor.name }}
+    </a>
+</div>
+
+{% endfor %}
+
 {% endblock %}
