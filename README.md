@@ -2,7 +2,7 @@
 
 ![amiresponsive mockups of project](ADD-LINK-HERE)
 
-**[Link to the deployed/ live site](https://rising-women.herokuapp.com/)**
+**[Link to the deployed site](https://rising-women.herokuapp.com/)**
 
 ![GitHub last commit](https://img.shields.io/github/last-commit/rachel-o-donnell/rising-women?color=fuschia&style=for-the-badge)
 ![GitHub contributors](https://img.shields.io/github/contributors/rachel-o-donnell/rising-women?color=purple&style=for-the-badge)
@@ -12,8 +12,8 @@
 # Project Overview
 Rising Women is a platform developed by women for women in technology to help mitigate the lack of representation in technical roles, particularly in leadership positions by:
 * promoting awareness of leading women in technology by curating a list of successful, inspiring role models
-* enabling women in technology leaders to mentor and support other women through insights-, skills- and strategies-sharing
-* providing opportunities for women technologists to learn from, be inspired by and network with other women and women role models in field
+* enabling women leaders in the technology sector to mentor and support other women through insights-, skills- and strategies-sharing
+* providing opportunities for women technologists to learn from, be inspired by and network with other women and women role models in the field
 
 This platform was built using Django, Python, JavaScript and Bootstrap 4. The site was deployed on Heroku and uses Cloudinary for cloud storage.
 
@@ -82,7 +82,7 @@ Rising Women is Team 6: Code Sisters' project submission for Code Institute's Wo
 
 # USER EXPERIENCE
 ## Strategy Plane
-Numerous case studies, research reports and white papers point to and acknowledge that Women in technology/ technical roles are still woefully underrepresented, particularly in leadership positions.
+Numerous case studies, research reports and white papers point to and acknowledge that Women in technology are still woefully underrepresented, particularly in leadership positions. This can, unfortunately, create a culture where women feel isolated and excluded, and may not have role models or mentors to support their career development.
 
 A [PwC UK research report, Women in Tech - Time to close the gender gap, 2017](https://www.pwc.co.uk/women-in-technology/women-in-tech-report.pdf) pointed out that: *Despite decades of progress towards workplace equality, women remain woefully underrepresented in the UK’s technology workforce.* According to the report,
 * just **23%** of the people working in STEM (Science, Technology Engineering and Mathematics) roles across the UK are female
@@ -98,12 +98,11 @@ The Rising Women project is focused on tackling the challenges around the Hackat
 #### Problems We Are Trying to Solve
 * Problem 1: Women technologists may not have access to mentors to support their career
 
-To help women reach their full potential in the industry, we believe that it is imperative that access to mentorship initiatives
-aimed at supporting women to achieve their short-term and mid-term careers goals as well as advance to more senior positions.
+To help women reach their full potential in the industry, we believe that it is imperative that opportunities from mentorship initiatives are made easily accessible. These mentorship initiatives are aimed at supporting women to achieve their short-term and mid-term careers goals as well as advance to more senior positions.
 
-* Problem 2: Women technologists may not have women role models to be inspired by
+* Problem 2: Women technologists may not have other women role models to be inspired by
 
-One of the call to action from PwC's report stated that: *You can’t be what you can’t see: The importance of visible role models at all levels.*
+One of the calls to action from PwC's report stated that: *You can’t be what you can’t see: The importance of visible role models at all levels.*
 
 We aim build a list of women in the industry role models at all levels and *shout louder about the role models already working in tech...so that they become more visible* to everyone of us in the field.
 
@@ -149,7 +148,7 @@ When planning the Rising Women's features and scope, we drew up a the Desirabili
 | 18 | Contact Form | All Users <sup>1</sup> | 3 | 3 | 3 | ❌ |
 
 
-1. All Users: Site Visitors, Logged In Users, Shop Owners, Superadmins
+1. All Users: Site Visitors, Logged In Users, Superadmins
 
 
 ## Structure Plane
@@ -159,6 +158,9 @@ When planning the Rising Women's features and scope, we drew up a the Desirabili
 * Site Map
 ### Database Design
 * Database ERD
+**Entity Relationship Diagram**
+![ERD Version 1](./documentation/rising-women-erd-v1.png)
+
 * Data Modelling
     * User Model
     * UserProfile
@@ -175,7 +177,10 @@ When planning the Rising Women's features and scope, we drew up a the Desirabili
 * Colour Palette
 * Imagery
 # Agile Methodology
-* GitHub Projects
+## **GitHub Projects**
+GitHub Projects was used to manage the development of the site. It helped our team to break down large issues into smaller issues and how these fit into the overall goals of implementing specific features we wanted for the site. We also used labels to distinguish the issues which are part of the setup, of the documentation, the must haves and the enhancements, and the required validations.
+
+
 # Features
 * Mentor Expetise Categorization
 * Defensive Programming
@@ -188,16 +193,54 @@ When planning the Rising Women's features and scope, we drew up a the Desirabili
 # Future Development, Iteration and Implementation
 # Technologies Used
 ## Languages Used
+* [HTML5](https://en.wikipedia.org/wiki/HTML5) was used for the content and structure of the site.
+* [CSS3](https://en.wikipedia.org/wiki/CSS#CSS_3) was used for the styling of the site.
+* [JavaScript](https://en.wikipedia.org/wiki/JavaScript) was used for the interactivity of the site.
+* [Python](https://www.python.org/) was used for the back end programming of the site.
 ## Frameworks Used
+* [DJANGO - v3.2 ](https://docs.djangoproject.com/en/4.1/releases/3.2/) Django is a free and open-source, Python-based web  framework that follows the model–template–views architectural pattern.
+* [Bootstrap4 - v4.6](https://getbootstrap.com/docs/4.6/getting-started/introduction/) was used as the frontend framework.
 ## Databases Used
+* [DB.SQLITE3](https://docs.djangoproject.com/en/4.1/ref/databases/#sqlite-notes) was the database used for the project (development).
+* [ElephantSQL](https://www.elephantsql.com/) ElephantSQL's Postgres as a Service was used to host the the database for the project (production).
 ## Libraries and Packages Used
-## Programmes and Applications Used
+* [django-allauth](https://django-allauth.readthedocs.io/en/latest/) is an integrated set of Django applications dealing with account authentication, registration, management, and third-party (social) account authentication.
+* [JQuery - v3.5.1](https://jquery.com/) is a fast, small, and feature-rich JavaScript library.
+* [Font Awesome Kit](https://fontawesome.com/v5/docs/web/setup/use-kit) is used for its icon toolkit.
+* [django-countries, v7.2.1](https://pypi.org/project/django-countries/7.2.1/) was the Django application used to provide country choices for use with forms, and a country field for models.
+* [django-crispy-forms, v1.14.0](https://pypi.org/project/django-crispy-forms/) was used to build programmatic reusable layouts out of form components.
+* [gunicorn](https://gunicorn.org/) - a Python WSGI HTTP Server that allows us to run any Python application concurrently by running multiple processes within a single dyno
+* [pillow](https://pypi.org/project/Pillow/) - a required Python imaging library used to enable handling of images.
+* [psycopg2](https://pypi.org/project/psycopg2/) - a postgresql database adapter for python and used to connect with our postgres database
+* [django storages](https://django-storages.readthedocs.io/en/latest/) - collection of custom storage backends for Django
+
+## Programmes and Applications
+* [Lucid Chart](https://www.lucidchart.com/pages/) was used to draw and build the Entity Relationship Diagram. It was also used to draw the User Flow Diagram.
+* [favicon.io](https://favicon.io/) used to create the site's favicon
+* [Git](https://git-scm.com/) used for version control and saving work in the repository, using the GitPod extension in Google Chrome to commit to GitHub.
+* [GitHub](https://github.com/) is the project's git repository
+* [GitHub Projects](https://docs.github.com/en/issues/planning-and-tracking-with-projects/learning-about-projects/about-projects) used to track and integrate issues for Agile Development
+* [Chrome DevTools](https://www.google.com/intl/en_uk/chrome/) - used for debugging, validation (Lighthouse) and taking fullscreen screenshots of the site
 ## Cloud Application Platforms Used
+* [Heroku](https://devcenter.heroku.com/) was used for hosting and deployment of the live site. Throughout, we have ensured the version being deployed to Heroku matches the development version by checking features and screen layouts on both versions.
 ## Cloud Storage Services Used
+* [Cloudinary](https://cloudinary.com/developers) was used to store the images.
 # Testing
+Please refer to [TESTING.md](./TESTING.md) file for:
+* Automated Testing and Validation Results
+* Manual Testing and Results
 ## Bugs, Issues and Solutions
+Please also refer to [TESTING.md](./TESTING.md) file for:
+* Solutions to bugs found during testing and development phase
+* Known bugs
 # Deployment and Local Development
 ## Deployment
+The deployment section covers the following:
+* Creating the database to be used in production
+    * Instructions to common question: *"What if you didn't use fixtures in your project?"*
+* Deploying to Heroku
+* Setting up Cloudinary for hosting media files
+
 ## Local Development
 * How to Fork
 * How to Clone
