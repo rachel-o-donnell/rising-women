@@ -1,0 +1,63 @@
+<header>
+    <nav class="navbar navbar-expand-lg border-bottom">
+        <a class="navbar-brand main-logo-link" href="{% url 'home' %}">
+            <h2 class="logo-font text-black my-0"><strong>Rising Women</strong></h2>
+        </a>
+        <button class="navbar-light navbar-toggler" type="button" data-toggle="collapse"
+                data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <form class="d-flex ml-auto mr-2" role="search">
+                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success" type="submit">Search</button>
+            </form>
+            <ul class="navbar-nav mb-2 mb-lg-0 text-center">
+                <li class="nav-item mr-2 dropdown">
+                    <a class="nav-link text-black" href="#"
+                       id="all-products-link"
+                       data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Categories
+                    </a>
+                    <div class="dropdown-menu border-0" aria-labelledby="all-category-link">
+                        <a href="" class="dropdown-item">Technical skills</a>
+                        <a href="" class="dropdown-item ">Leadership skills</a>
+                        <a href="" class="dropdown-item ">Management development</a>
+                        <a href="" class="dropdown-item">Interpersonal skills</a>
+                    </div>
+                </li>
+                <li class="nav-item mr-2">
+                    <a class="nav-link" href={% url 'mentorslist' %}>Meet the mentors</a>
+                </li>
+                <li class="nav-item mr-2">
+                    <a class="nav-link" href="#">Become a mentor</a>
+                </li>
+                <li class="nav-item mr-2">
+                    <a class="nav-link" href="#">About us</a>
+                </li>
+                <li class="nav-item mr-2 dropdown">
+                    <a class="text-black nav-link" href="#" id="user-options" data-toggle="dropdown"
+                       aria-haspopup="true" aria-expanded="false">
+                        <div class="text-center">
+                            <div><i class="fas fa-user fa-lg"></i></div>
+                            <p class="my-0">My Account</p>
+                        </div>
+                    </a>
+                    <div class="dropdown-menu border-0" aria-labelledby="user-options">
+                        {% if request.user.is_authenticated %}
+                            {% if request.user.is_superuser %}
+                                <a href="" class="dropdown-item">Product Management</a>
+                            {% endif %}
+                            <a href="" class="dropdown-item">My Profile</a>
+                            <a href="{% url 'account_logout' %}" class="dropdown-item">Logout</a>
+                        {% else %}
+                            <a href="{% url 'account_signup' %}" class="dropdown-item">Register</a>
+                            <a href="{% url 'account_login' %}" class="dropdown-item">Login</a>
+                        {% endif %}
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </nav>
+</header>
