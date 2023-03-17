@@ -168,7 +168,20 @@ When planning the Rising Women's features and scope, we drew up a the Desirabili
     * Subcategory Model
     * Mentor Model
     * Bookmark Model
+
 ### User Stories
+| # | Issue ID | Target User | User Story |
+| --- | --- | --- | --- |
+| VIEWING &amp; NAVIGATION |  |  |  |
+| 1 | [add-here-issue-number](add-here-issue-closed-resolved-number) | Visitor | I want to be able to navigate around the site to view a list of mentors |
+| 2 | [add-here-issue-number](add-here-issue-closed-resolved-number) | Visitor | I want to be able to navigate around the site to view a list of inspiring women in technology |
+| 3 | [add-here-issue-number](add-here-issue-closed-resolved-number) | Visitor | I want to be able to navigate around the site to learn more about Rising Women and the team behind the site |
+| REGISTRATION &amp; USER ACCOUNTS |  |  |  |
+| 4 | [add-here-issue-number](add-here-issue-closed-resolved-number) | User | Easily register for an account and be able to view my profile |
+| SORTING &amp; SEARCHING |  |  |  |
+| REGISTRATION &amp; USER ACCOUNTS |  |  |  |
+| USER'S BOOKMARKS |  |  |  |
+
 
 ## Skeleton Plane
 * Wireframes
