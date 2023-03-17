@@ -3,12 +3,27 @@
 
 {% for mentor in object_list %}
 
-<div style="margin-top:8em;">
-    <a href="{% url 'mentordetail' mentor.slug %}" class="post-link">
+<div style="margin-top:2em;">
+    {% if "placeholder" in mentor.image.url %}
+    <img src="https://res.cloudinary.com/dwjq6izv5/image/upload/v1676992902/PP1/blank-profile-picture-g64a2ffd0b_640_bsdtib.png" width="60em;">
+{% else %}
+    <img src='{{ mentor.image.url }}'>
+{% endif %}
+ 
+    <a href="{% url 'mentor-detail' mentor.slug %}" class="post-link">
         {{ mentor.name }}
     </a>
 </div>
 
 {% endfor %}
+
+<div style="margin-top: 1em;">
+{{ request.user }}
+</div>
+</br>
+
+<div>
+    <a href="{% url 'mentor-application' %}" class="post-link" target="_blank">Apply to be a mentor</a>
+</div>
 
 {% endblock %}
