@@ -170,17 +170,23 @@ When planning the Rising Women's features and scope, we drew up a the Desirabili
     * Bookmark Model
 
 ### User Stories
-| # | Issue ID | Target User | User Story |
-| --- | --- | --- | --- |
-| VIEWING &amp; NAVIGATION |  |  |  |
-| 1 | [add-here-issue-number](add-here-issue-closed-resolved-number) | Visitor | I want to be able to navigate around the site to view a list of mentors |
-| 2 | [add-here-issue-number](add-here-issue-closed-resolved-number) | Visitor | I want to be able to navigate around the site to view a list of inspiring women in technology |
-| 3 | [add-here-issue-number](add-here-issue-closed-resolved-number) | Visitor | I want to be able to navigate around the site to learn more about Rising Women and the team behind the site |
-| REGISTRATION &amp; USER ACCOUNTS |  |  |  |
-| 4 | [add-here-issue-number](add-here-issue-closed-resolved-number) | User | Easily register for an account and be able to view my profile |
-| SORTING &amp; SEARCHING |  |  |  |
-| REGISTRATION &amp; USER ACCOUNTS |  |  |  |
-| USER'S BOOKMARKS |  |  |  |
+| #                                | Issue ID | Target User | User Story                                                                                                                                                                                                 |
+|----------------------------------| --- |-------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| VIEWING &amp; NAVIGATION         |  |             |                                                                                                                                                                                                            |
+| 1                                | [add-here-issue-number](add-here-issue-closed-resolved-number) | Visitor     | I want to be able to navigate around the site to view a list of mentors                                                                                                                                    |
+| 2                                | [add-here-issue-number](add-here-issue-closed-resolved-number) | Visitor     | I want to be able to navigate around the site to view a list of inspiring women in technology                                                                                                              |
+| 3                                | [add-here-issue-number](add-here-issue-closed-resolved-number) | Visitor     | I want to be able to navigate around the site to learn more about Rising Women and the team behind the site                                                                                                |
+| 4                                | [add-here-issue-number](add-here-issue-closed-resolved-number) | Visitor     | I can click on Register button on Home Page so that I can navigate to Registration Page.                                                                                                                   |
+| 5                                | [add-here-issue-number](add-here-issue-closed-resolved-number) | Visitor     | in the Registration Page I can fill a form with my name, my surname, my e-mail address, my phone number so that I can create an account as a mentee.                                                       |
+| 6                                | [add-here-issue-number](add-here-issue-closed-resolved-number) | User        | I can reach the mentors on Linked in and Github after registration so that I can have communication ways with mentors.                                                                                     |
+| 7                                | [add-here-issue-number](add-here-issue-closed-resolved-number) | User        | I can visit mentor profiles by clicking on their name from the search results so that I can reach information like current job title, linked in and github accounts, image and availability about mentors. |
+| REGISTRATION &amp; USER ACCOUNTS |  |             |                                                                                                                                                                                                            |
+| 8                                | [add-here-issue-number](add-here-issue-closed-resolved-number) | User        | Easily register for an account and be able to view my profile                                                                                                                                              |
+| 9                                | [add-here-issue-number](add-here-issue-closed-resolved-number) | Visitor     | I can click on Register button on Home Page so that I can navigate to Registration Page.                                                                                                        |
+| 10                               | [add-here-issue-number](add-here-issue-closed-resolved-number) | Visitor     | In the Registration Page I can fill a form with my name, my surname, my e-mail address, my phone number so that I can create an account as a mentee.                                                       |
+| SORTING &amp; SEARCHING          |  |             |                                                                                                                                                                                                            |
+| 11                               | [add-here-issue-number](add-here-issue-closed-resolved-number) | Visitor     | I can have access to Career Couching by filtering skills that I need to on Search Page, so that I can find the right mentor for me.                                                             |
+| USER'S BOOKMARKS                 |  |             |                                                                                                                                                                                                            |
 
 
 ## Skeleton Plane
