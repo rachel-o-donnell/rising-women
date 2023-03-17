@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block extra_meta %}
+{% endblock %}
+
+{% block extra_title %}Profile | {% endblock %}
+
+{% block extra_css %}
+    <link rel="stylesheet" href="{% static 'profiles/css/profile.css' %}">
+{% endblock %}
+
+<!-- {% block page_header %}
+    <div class="container header-container">
+        <div class="row">
+            <div class="col"></div>
+        </div>
+    </div>
+{% endblock %} -->
+
+
+{% block content %}
+<h1 class="display-4 text-success">My profile!</h1>
+
+{% endblock %}
+
+{% block postloadjs %}
+    {{ block.super }}
+    <script src="{% static 'profiles/js/countryfield.js' %}"></script>
+{%  endblock %}

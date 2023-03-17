@@ -50,6 +50,7 @@ INSTALLED_APPS = [
     'allauth.socialaccount',
     'mentors',
     'home',
+    'profiles',
 ]
 
 SITE_ID = 1
