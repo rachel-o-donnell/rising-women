@@ -25,3 +25,41 @@
 .toast-capper {
     height: 2px;
 }
+header {
+    font-family: 'Montserrat', sans-serif;
+}
+
+.color-green {
+    color: #2aad74;
+}
+.color-dark-purple {
+    color: #4a2879;
+}
+
+.nav-link {
+    font-size: .8rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: #2aad74;
+}
+
+.nav-link:hover {
+    color: #bf387c;
+}
+
+.nav-link-active {
+    color: #bf387c;
+    text-decoration: underline;
+}
+
+.nav-link-small {
+    font-size: .7rem;
+}
+
+.bg-light-grey {
+    background-color: #e2e2e2;
+}
+
+.form-rounded {
+    border-radius: 1rem;
+}
