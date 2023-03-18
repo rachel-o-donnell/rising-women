@@ -114,6 +114,7 @@ Full testing was conducted using the following physical devices:
 ### Solved Bugs
 | # | Bugs, Errors and Issues | Solutions |
 | :--- | :--- | :--- |
+| `RelatedObjectDoesNotExist at /accounts/login/` error | A couple of users already exist before the profiles app was created and before thesignal was added, so when these users tried to login, the signal won't let them login since the username isn't new so it's trying to save the profiles which do not exist. | To fix this error, go to models.py on profiles app and temporarily adjust the signal by commenting out ```if created: instance.userprofile.save()``` and adjust the indentation for  `UserProfile.objects.create(user=instance)`. Then login as these existing users. After logging out, go back to models.py file in the profiles app and revert the adjustment made to signal. |
 
 ### Known Bugs
 | # | Known Bugs, Errors and Issues | Justification |

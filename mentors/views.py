@@ -3,7 +3,7 @@ from django.views import generic, View
 from django.views.generic import ListView, CreateView, FormView
 from django.contrib import messages
 from .models import Mentor, Category, Subcategory
-from .forms import MentorApplicationForm
+# from .forms import MentorApplicationForm
 
 # Create your views here.
 
@@ -37,15 +37,15 @@ class MentorDetail(CreateView):
         )
 
 
-class MentorApplicationForm(CreateView):
-    form_class = MentorApplicationForm
-    template_name = 'mentor-application.html'
-    success_url = 'thanks'
+# class MentorApplicationForm(CreateView):
+#     form_class = MentorApplicationForm
+#     template_name = 'mentor-application.html'
+#     success_url = 'thanks'
 
 
-def thankPage(request):
+# def thankPage(request):
 
-    return render(request, 'thanks.html')
+#     return render(request, 'thanks.html')
 
 
 class MentorsFilters(ListView):

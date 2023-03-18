@@ -1,0 +1,47 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block extra_meta %}
+{% endblock %}
+
+{% block extra_title %}Profile | {% endblock %}
+
+{% block extra_css %}
+    <link rel="stylesheet" href="{% static 'profiles/css/profile.css' %}">
+{% endblock %}
+
+{% block page_header %}
+    <!-- <div class="container header-container">
+        <div class="row">
+            <div class="col"></div>
+        </div>
+    </div> -->
+{% endblock %}
+
+
+{% block content %}
+<div class="container mb-5">
+    <div class="row">
+        <div class="col">
+            <!-- PAGE HEADING -->
+            <h2 class="display-5 text-center mt-5 mb-4">My Profile</h2>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-12">
+            <p class="font-weight-bold">Hi {{ user.username }},</p>
+        </div>
+        <div class="col-12">
+            <p>
+                This is where you can create and update your personal info such as bio, town or city and country.
+                To view your favourite mentors, click the button below:
+            </p>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block postloadjs %}
+    {{ block.super }}
+    <script src="{% static 'profiles/js/countryfield.js' %}"></script>
+{%  endblock %}
