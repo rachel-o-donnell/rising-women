@@ -15,6 +15,7 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
+from home.views import handler404, handler500, handler400
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -23,3 +24,8 @@ urlpatterns = [
     path('mentors/', include('mentors.urls')),
     path('profile/', include('profiles.urls')),
 ]
+
+
+handler404 = 'home.views.handler404'
+handler500 = 'home.views.handler500'
+handler403 = 'home.views.handler400'
