@@ -1,30 +1,38 @@
 {% extends "base.html" %}
+{% load static %}
+
 {% block content %}
+<div class="container-fluid mb-5">
+    <div class="row">
+        <div class="col text-center mt-5 mb-5">
+            <!-- PAGE HEADING -->
+            <h2 class="display-5 text-center myy-5">Rising Women Mentors</h2>
+        </div>
+    </div>
+    <!-- START OF INDIVIDUAL MENTOR CARDS -->
+    {% for mentor in object_list %}
+    <div class="card-deck">
 
-{% for mentor in object_list %}
+        <div class="card mb-3">
+            {% if mentor.image %}
+            <img class="card-img-top" src="{{ mentor.image.url }}" alt="{{ mentor.name }}">
+            {% else %}
+            <img src="https://res.cloudinary.com/dwjq6izv5/image/upload/v1676992902/PP1/blank-profile-picture-g64a2ffd0b_640_bsdtib.png"
+                width="60em;">
+            {% endif %}
 
-<div style="margin-top:2em;">
-    {% if "placeholder" in mentor.image.url %}
-    <img src="https://res.cloudinary.com/dwjq6izv5/image/upload/v1676992902/PP1/blank-profile-picture-g64a2ffd0b_640_bsdtib.png"
-        width="60em;">
-    {% else %}
-    <img src='{{ mentor.image.url }}'>
-    {% endif %}
-
-    <a href="{% url 'mentor-detail' mentor.slug %}" class="post-link">
-        {{ mentor.name }}
-    </a>
-</div>
-
-{% endfor %}
-
-<div style="margin-top: 1em;">
-    {{ user.username }}
-</div>
-</br>
-
-<div>
-    <a href="" class="post-link" target="_blank">Apply to be a mentor</a>
+            <div class="card-body">
+                <h5 class="card-title">{{ mentor.name }}</h5>
+                <p class="card-text"><strong>Expertise:</strong> {{ mentor.expertise }}</p>
+                <p class="card-text"><strong>Category:</strong> {{ mentor.category.name }}</p>
+                <p class="card-text"><strong>Subcategory:</strong> {{ mentor.subcategory.name }}</p>
+            </div>
+            <div class="card-footer">
+                <a href="{% url 'mentor-detail' mentor_slug=mentor.slug %}" class="btn btn-primary">View Mentor</a>
+            </div>
+        </div>
+    </div>
+    {% endfor %}
 </div>
 
 {% endblock %}

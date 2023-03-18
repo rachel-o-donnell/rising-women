@@ -76,9 +76,10 @@ For the automated testing, the writing and running of these tests used [Django's
 We also used coverage to generate the report and find out the percentage of statements that we were able to cover and those that we missed for every installed application. We tried to achieve as close to the 100% mark as we possibly can.
 
 #### Coverage
-| Installed App Coverage Report | Cover in Percentage | Screenshot of Coverage Report |
-| -- | :-: | :-: |
-| [add-here-the-app-name] | [add-here-overall-coverage-score-for-the-specific-app] | [add-here-coverage-testing-scores-screenshot] |
+| Installed App Coverage Report | Test | Cover in Percentage | Screenshot of Coverage Report |
+| -- | :-: | :-: | :-: |
+| mentors | test_models  | [add-here-overall-coverage-score-for-the-specific-app] | [test-models](./documentation/mentors-app-test-models.png) |
+| mentors | test_views  | [add-here-overall-coverage-score-for-the-specific-app] | [test-models](./documentation/mentors-app-test-views-wip.png) |
 
 ## Manual Testing
 ### Testing User Stories

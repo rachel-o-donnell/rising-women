@@ -1,16 +1,47 @@
-{% extends "base.html" %} 
-{% block content %} 
+{% extends "base.html" %}
+{% load static %}
 
+{% block extra_title %}{{ object.name }} | {% endblock %}
 
-<div style="margin-top:8em;">
-    {% if "placeholder" in mentor.image.url %}
-    <img src="https://res.cloudinary.com/dwjq6izv5/image/upload/v1676992902/PP1/blank-profile-picture-g64a2ffd0b_640_bsdtib.png" width="60em;">
-{% else %}
-    <img src='{{ mentor.image.url }}'>
-{% endif %}
-{{ mentor.name }}
-{{ mentor.category }}
+{% block content %}
 
+<div class="container mb-5">
+    <div class="row">
+        <div class="col text-center mt-1">
+            <!-- PAGE HEADING -->
+            <h2 class="display-5 text-center myy-5">Meet the Mentors</h2>
+        </div>
+    </div>
+    <!-- INDIVIDUAL MENTOR DETAIL -->
+    <h1>{{ object.name }}</h1>
+    <div class="card mb-3">
+        <img class="card-img-top" src="{{ object.image.url }}" alt="{{ object.name }}">
+        <div class="card-body">
+            <p><strong>Expertise:</strong> {{ object.expertise }}</p>
+            <p><strong>Category:</strong> {{ object.category.name }}</p>
+            <p><strong>Subcategory:</strong> {{ object.subcategory.name }}</p>
+            <p>{{ object.bio }}</p>
+
+            <div>
+                <p class="h5 text-center">Learn More and Apply to be {{ object.name }}'s Mentee by creating an account with Women Rising</p>
+                <button>Register Now</button>
+            </div>
+
+            {% if request.user.is_authenticated %}
+            <div>
+                <a href="{{ object.linkedin }}" class="text-decoration-none" target="_blank" rel="noopener" aria-label="Link to {{ object.linkedin }}">
+                    Connect with {{ object.name }} on LinkedIn
+                </a>
+            </div>
+            <div>
+                <a href="{{ object.website }}" class="text-decoration-none" target="_blank" rel="noopener" aria-label="Link to {{ object.website }}">
+                    Learn more abour {{ object.name }} by visiting her website.
+                </a>
+            </div>
+            {% endif %}
+        </div>
+    </div>
 </div>
+
 
 {% endblock %}
