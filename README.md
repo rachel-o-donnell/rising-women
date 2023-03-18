@@ -191,10 +191,23 @@ When planning the Rising Women's features and scope, we drew up a the Desirabili
 
 ## Skeleton Plane
 * Wireframes
+![home page](https://github.com/RozWelch/rising-women/blob/roz-styling/assets/readme_images/wireframe1home.jpg)
+![browse mentors](https://github.com/RozWelch/rising-women/blob/roz-styling/assets/readme_images/wireframe3list.jpg)
+![mentor details](https://github.com/RozWelch/rising-women/blob/roz-styling/assets/readme_images/wireframe2bio.jpg)
+![mentor sign up](https://github.com/RozWelch/rising-women/blob/roz-styling/assets/readme_images/wireframe4mentorform.jpg)
+* Initial Design
+![home page](https://github.com/RozWelch/rising-women/blob/roz-styling/assets/readme_images/initial_design-1.jpg)
+![browse mentors](https://github.com/RozWelch/rising-women/blob/roz-styling/assets/readme_images/initial_design-2.jpg)
+![mentor details](https://github.com/RozWelch/rising-women/blob/roz-styling/assets/readme_images/initial_design-3.jpg)
+![mentor sign up](https://github.com/RozWelch/rising-women/blob/roz-styling/assets/readme_images/initial_design-4.jpg)
+![bookmarked mentors](https://github.com/RozWelch/rising-women/blob/roz-styling/assets/readme_images/initial_design-5.jpg)
 ## Surface Plane
 * Typography
+Monserrat was selected for headings, and Atkinson Hyperlegible for body text (highly legible)
 * Colour Palette
+![fonts and colour pallet](https://github.com/RozWelch/rising-women/blob/roz-styling/assets/readme_images/initial_design_fonts_colourpallet.jpg)
 * Imagery
+The main image, and the headshots of Mentors are from www.freepix.com, and are used for eductional purposes only
 # Agile Methodology
 ## **GitHub Projects**
 GitHub Projects was used to manage the development of the site. It helped our team to break down large issues into smaller issues and how these fit into the overall goals of implementing specific features we wanted for the site. We also used labels to distinguish the issues which are part of the setup, of the documentation, the must haves and the enhancements, and the required validations.
