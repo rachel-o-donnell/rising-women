@@ -10,7 +10,7 @@ class Mentor(admin.ModelAdmin):
     list_filter = ('category', 'subcategory')
     search_fields = ['category', 'subcategory',]
     list_display = ('name', 'verified', 'bio', 'image',
-                    'website', 'linkin', 'category',
+                    'website', 'linkedin', 'category',
                     'joined',)
     list_editable = ['verified']
 
