@@ -1,3 +1,14 @@
+/* Google Fonts */
+
+
+* {
+    margin: 0;
+    padding: 0;
+    border: none;
+    box-sizing: border-box;
+}
+
+/* Main Section */
 /* ------------------------------- bootstrap toasts */
 
 .message-container {
