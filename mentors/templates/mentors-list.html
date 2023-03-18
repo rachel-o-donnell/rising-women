@@ -1,5 +1,5 @@
-{% extends "base.html" %} 
-{% block content %} 
+{% extends "base.html" %}
+{% block content %}
 
 {% for mentor in object_list %}
 
@@ -9,7 +9,7 @@
 {% else %}
     <img src='{{ mentor.image.url }}'>
 {% endif %}
- 
+
     <a href="{% url 'mentor-detail' mentor.slug %}" class="post-link">
         {{ mentor.name }}
     </a>
@@ -23,7 +23,7 @@
 </br>
 
 <div>
-    <a href="{% url 'mentor-application' %}" class="post-link" target="_blank">Apply to be a mentor</a>
+    <a href="" class="post-link" target="_blank">Apply to be a mentor</a>
 </div>
 
 {% endblock %}

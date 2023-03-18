@@ -3,8 +3,7 @@ from . import views
 
 urlpatterns = [
     path('', views.MentorsList.as_view(), name='mentors-list'),
-    path('<slug:slug>', views.MentorDetail.as_view(), name='mentor-detail'),
-    # path('mentorapplication/', views.MentorApplicationForm.as_view(),
-    #      name='mentor-application'),
-    # path('mentorapplication/thanks/', views.thankPage, name='thank-message'),
+    path('<slug:mentor_slug>/', views.MentorDetail.as_view(),
+         name='mentor-detail'),
+    path('mentor-search/', views.mentor_search, name='mentor_search'),
 ]

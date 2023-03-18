@@ -1,57 +1,51 @@
 from django.shortcuts import render, redirect, reverse, get_object_or_404
-from django.views import generic, View
-from django.views.generic import ListView, CreateView, FormView
+# from django.views import generic, View
+from django.views.generic import ListView, DetailView
 from django.contrib import messages
 from .models import Mentor, Category, Subcategory
-# from .forms import MentorApplicationForm
-
-# Create your views here.
 
 
 class MentorsList(ListView):
-    """
-    RENDER ALL THE MENTORS THAT HAVE BEEN VERIFIED AND APPROVED TO JOIN AS
-    """
+    """ RENDER ALL THE AVAILABLE VERIFIED MENTORS AVAILABLE """
     model = Mentor
     queryset = Mentor.objects.filter(verified=True).order_by("-joined")
     template_name = "mentors-list.html"
 
 
-class MentorDetail(CreateView):
-    """
-    RENDER THE DETAILS PAGE OF THE SELECTED MENTOR
-    """
+class MentorDetail(DetailView):
+    """ RENDER THE DETAILS PAGE OF THE SELECTED MENTOR """
+
     model = Mentor
+    template_name = 'mentor-detail.html'
+    slug_url_kwarg = 'mentor_slug'
 
-    def get(self, request, slug, *args, **kwargs):
-        model = Mentor
-        queryset = model.objects.filter(verified=True)
-        mentor = get_object_or_404(queryset, slug=slug)
-
-        return render(
-            request,
-            "mentor-detail.html",
-            {
-               "mentor": mentor,
-            },
-        )
+    def get_object(self, queryset=None):
+        queryset = Mentor.objects.filter(slug=self.kwargs['mentor_slug'],
+                                         verified=True)
+        obj = get_object_or_404(queryset)
+        return obj
 
 
-# class MentorApplicationForm(CreateView):
-#     form_class = MentorApplicationForm
-#     template_name = 'mentor-application.html'
-#     success_url = 'thanks'
-
-
-# def thankPage(request):
-
-#     return render(request, 'thanks.html')
-
-
-class MentorsFilters(ListView):
-    model = Mentor
-    template_name = "categories.html"
-
-    def get_queryset(self):
-        queryset = Mentor.objects.filter(category=mentor.category)
-        return queryset
+def mentor_search(request):
+    query = request.GET.get('q')
+    category = request.GET.get('category')
+    subcategory = request.GET.get('subcategory')
+    if query:
+        # Search mentors by name or expertise
+        mentors = Mentor.objects.filter(Q(name__icontains=query) |
+                                        Q(expertise__icontains=query))
+    elif category:
+        # Filter mentors by category
+        mentors = Mentor.objects.filter(category__name=category)
+        if subcategory:
+            # Filter mentors by subcategory
+            mentors = mentors.filter(subcategory__name=subcategory)
+    else:
+        # If no query or filter, display all mentors
+        mentors = Mentor.objects.all()
+    # Get all categories and subcategories for displaying in the search form
+    categories = Category.objects.all()
+    subcategories = Subcategory.objects.all()
+    context = {'mentors': mentors, 'categories': categories,
+               'subcategories': subcategories}
+    return render(request, 'mentor_search.html', context)

@@ -3,8 +3,8 @@
 {% block content %}
 
 <div style="margin-top: 8em;">
-<form id="mentor-application" method="post" action="{% url 'mentor-application' %}" enctype="multipart/form-data">
-    
+<form id="mentor-application" method="post" action="" enctype="multipart/form-data">
+
   {% csrf_token %}
   {{ form.image }}
   {{ form.name }}
@@ -13,7 +13,7 @@
   {{ form.subcategory }}
   {{ form.website }}
   {{ form.linkin }}
-  
+
   <input type="submit">
 </form>
 </div>
