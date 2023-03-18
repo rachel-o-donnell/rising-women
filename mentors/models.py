@@ -1,4 +1,3 @@
-from django.contrib.auth.models import User
 from django.db import models
 from django.utils.text import slugify
 from cloudinary.models import CloudinaryField
@@ -28,10 +27,10 @@ class Mentor(models.Model):
     slug = models.SlugField(max_length=100, null=False, unique=True)
     name = models.CharField(max_length=120, null=False, blank=False)
     verified = models.BooleanField(null=False, default=False)
-    bio = models.CharField(max_length=1000, null=False, blank=False)
+    bio = models.TextField(max_length=1000, null=False, blank=False)
     image = CloudinaryField('image', default='placeholder')
-    website = models.CharField(max_length=250)
-    linkin = models.CharField(max_length=250)
+    website = models.CharField(max_length=250, null=True, blank=True)
+    linkedin = models.CharField(max_length=250, null=True, blank=True)
     category = models.ForeignKey(Category, on_delete=models.CASCADE)
     subcategory = models.ManyToManyField(Subcategory,
                                          related_name='subcategories',
