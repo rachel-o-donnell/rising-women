@@ -3,7 +3,11 @@
 
 
 <div style="margin-top:8em;">
-
+    {% if "placeholder" in mentor.image.url %}
+    <img src="https://res.cloudinary.com/dwjq6izv5/image/upload/v1676992902/PP1/blank-profile-picture-g64a2ffd0b_640_bsdtib.png" width="60em;">
+{% else %}
+    <img src='{{ mentor.image.url }}'>
+{% endif %}
 {{ mentor.name }}
 {{ mentor.category }}
 
