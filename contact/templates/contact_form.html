@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% load crispy_forms_tags %}
+
+{% block content %}
+    <div class="mx-5 my-5">
+        <!-- Page title -->
+        <h1>Contact Us</h1>
+
+        <!-- Contact form -->
+        <form method="post">
+            {% csrf_token %}
+
+            <!-- Render form fields using crispy forms -->
+            {{ form|crispy }}
+
+            <!-- Submit button -->
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+
+    </div>
+
+{% endblock %}
