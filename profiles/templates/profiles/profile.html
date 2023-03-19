@@ -16,33 +16,32 @@
 
 
 {% block content %}
-<div class="container mb-5">
-    <div class="row">
-        <div class="col">
+    {% include 'includes/header-separator-bar.html' %}
+<div class="container mb-5 mt-4 bg-light-grey">
+    <div class="row justify-content-center text-left">
+        <div class="col col-12 col-lg-8 align-self-start p-4">
             <!-- PAGE HEADING -->
-            <h2 class="display-5 text-center mt-5 mb-4 allauthH"><u>My Profile</u></h2>
+            <h2 class="header-underline-pink mb-4"><span class="color-dark-purple">Mentors Sign Up</span></h2>
+            <!-- PAGE GREETING -->
+            <div>
+                <p class="font-weight-bold profilefont">Hi {{ user.username }},</p>
+            </div>
+            <div>
+                <p>
+                    This is where you can create and update your personal.
+                </p>
+            </div>
+            <!-- PROFILE FORM -->
+            <div>
+                <form class="mt-3" action="{% url 'profile' %}" method="POST" id="profile-update-form">
+                    {% csrf_token %}
+                    {{ form|crispy }}
+                    <button class="btn btn-sm bg-dark-purple text-white" id="buttonallauth">Submit</button>
+                    <a class="btn btn-sm bg-dark-purple text-white" href="/">Cancel</a>
+                </form>
+            </div>
         </div>
     </div>
-    <div class="row">
-        <div class="col-12">
-            <p class="font-weight-bold profilefont">Hi {{ user.username }},</p>
-        </div>
-        <div class="col-12">
-            <p class="profilefont">
-                This is where you can create and update your personal.
-            </p>
-        </div>
-    </div>
-
-    <!-- PROFILE FORM -->
-    <div>
-        <form class="mt-3 profilefont" action="{% url 'profile' %}" method="POST" id="profile-update-form">
-            {% csrf_token %}
-            {{ form|crispy }}
-            <button class="btn-lg text-light text-uppercase text-center" id="buttonallauth">Update Information</button>
-        </form>
-    </div>
-
 </div>
 {% endblock %}
 
