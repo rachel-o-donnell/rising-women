@@ -15,6 +15,7 @@ header {
 .color-green {
     color: #2aad74;
 }
+
 .color-dark-purple {
     color: #4a2879;
 }
@@ -52,6 +53,22 @@ header {
     background-color: #e2e2e2;
 }
 
+.bg-green {
+    background-color: #2aad74;
+}
+
+.bg-dark-purple {
+    background-color: #4A2879;
+}
+
+.bg-pink {
+    background-color: #bf387c;
+}
+
+.bg-purple {
+    background-color: #6e639a;
+}
+
 .content {
     font-family: 'Atkinson Hyperlegible', sans-serif;
     margin-bottom: 5rem;
@@ -59,6 +76,10 @@ header {
 
 .rounded-card {
     border-radius: 2rem;
+}
+
+.rounded-large {
+    border-radius: 1rem;
 }
 
 .card-image {
@@ -69,6 +90,10 @@ header {
 .detail-card-image {
     height: 200px;
     width: auto;
+}
+
+.gradient-background {
+    background-image: linear-gradient(to bottom right, #4a2879, #bf387c);
 }
 
 /* Main Section */
