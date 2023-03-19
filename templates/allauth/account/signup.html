@@ -1,31 +1,35 @@
 {% extends "account/base.html" %}
+{% load static %}
+
+{% load crispy_forms_tags %}
 
 {% load i18n %}
 
 {% block head_title %}{% trans "Signup" %}{% endblock %}
 
 {% block content %}
-{% include 'includes/header-separator-bar.html' %}
-<div class="container py-5">
-  <div class="card allauthstyle px-md-5 justify-content-center">
-    <div class="card-body">
-      <h1 class="allauthH"><u>{% trans "Sign Up" %}</u></h1>
+    {% include 'includes/header-separator-bar.html' %}
+    <div class="container mb-5 mt-4 bg-light-grey">
+        <div class="row justify-content-center text-left">
+            <div class="col col-12 col-lg-8 align-self-start p-4">
+                <!-- PAGE HEADING -->
+                <h2 class="header-underline-pink mb-4"><span class="color-dark-purple">{% trans "Sign Up" %}</span></h2>
 
-      <p class="allauthP">{% blocktrans %}Already have an account? Then please <a href="{{ login_url }}">sign
-          in</a>.{% endblocktrans %}
-      </p>
 
-      <form class="signup" id="signup_form" method="post" action="{% url 'account_signup' %}">
-        {% csrf_token %}
-        {{ form.as_p }}
-        {% if redirect_field_value %}
-        <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
-        {% endif %}
-        <button class="primaryAction btn-lg text-light" type="submit" id="buttonallauth">{% trans "Sign Up" %}
-          &raquo;</button>
-      </form>
+                <p class="allauthP">{% blocktrans %}Already have an account? Then please <a href="{{ login_url }}">sign
+                    in</a>.{% endblocktrans %}
+                </p>
+                <div>
+                    <form class="signup" id="signup_form" method="post" action="{% url 'account_signup' %}">
+                        {% csrf_token %}
+                        {{ form|crispy }}
+                        {% if redirect_field_value %}
+                            <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
+                        {% endif %}
+                        <button class="btn btn-sm bg-dark-purple text-white" type="submit" id="buttonallauth">{% trans "Sign Up" %}</button>
+                    </form>
+                </div>
+            </div>
+        </div>
     </div>
-  </div>
-</div>
-
 {% endblock %}
