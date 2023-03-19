@@ -51,6 +51,7 @@ INSTALLED_APPS = [
     'mentors',
     'home',
     'profiles',
+    'contact',
 
     # Other
     'crispy_forms',
@@ -100,6 +101,7 @@ TEMPLATES = [
         'DIRS': [
             os.path.join(BASE_DIR, 'templates'),
             os.path.join(BASE_DIR, 'templates', 'allauth'),
+            os.path.join(BASE_DIR, 'contact', 'templates'),
         ],
         'APP_DIRS': True,
         'OPTIONS': {
