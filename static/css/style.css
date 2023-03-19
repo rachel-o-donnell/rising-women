@@ -27,7 +27,6 @@ header {
 .header-underline-pink {
     color: #bf387c;
     text-decoration: underline;
-    text-underline-color: #bf387c !important;
     text-underline-offset: .7rem;
 }
 
