@@ -284,4 +284,7 @@ Please refer to [DEPLOYMENT.md](./DEPLOYMENT.md) file for steps to:
 
 # Credits
 
+Code Institute's Boutique Ado walkthrough.
+https://github.com/JoyZadan/shop-kbeauty
+
 # Acknowledgements
