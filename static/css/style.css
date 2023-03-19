@@ -66,6 +66,11 @@ header {
     width: auto;
 }
 
+.detail-card-image {
+    height: 200px;
+    width: auto;
+}
+
 /* Main Section */
 
 /* bootstrap toasts */
