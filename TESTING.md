@@ -80,6 +80,7 @@ We also used coverage to generate the report and find out the percentage of stat
 | -- | :-: | :-: | :-: |
 | mentors | test_models  | [add-here-overall-coverage-score-for-the-specific-app] | [test-models](./documentation/mentors-app-test-models.png) |
 | mentors | test_views  | [add-here-overall-coverage-score-for-the-specific-app] | [test-models](./documentation/mentors-app-test-views-wip.png) |
+| profiles | test_views  | [add-here-overall-coverage-score-for-the-specific-app] | [test-models](./documentation/profiles-test-views.png) |
 
 ## Manual Testing
 ### Testing User Stories

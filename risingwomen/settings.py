@@ -51,6 +51,9 @@ INSTALLED_APPS = [
     'mentors',
     'home',
     'profiles',
+
+    # Other
+    'crispy_forms',
 ]
 
 SITE_ID = 1
@@ -89,6 +92,8 @@ MIDDLEWARE = [
 
 ROOT_URLCONF = 'risingwomen.urls'
 
+CRISPY_TEMPLATE_PACK = 'bootstrap4'
+
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
@@ -104,6 +109,10 @@ TEMPLATES = [
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
             ],
+            'builtins': [
+                'crispy_forms.templatetags.crispy_forms_tags',
+                'crispy_forms.templatetags.crispy_forms_field',
+            ]
         },
     },
 ]
