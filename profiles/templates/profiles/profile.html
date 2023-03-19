@@ -20,15 +20,15 @@
     <div class="row">
         <div class="col">
             <!-- PAGE HEADING -->
-            <h2 class="display-5 text-center mt-5 mb-4">My Profile</h2>
+            <h2 class="display-5 text-center mt-5 mb-4 allauthH"><u>My Profile</u></h2>
         </div>
     </div>
     <div class="row">
         <div class="col-12">
-            <p class="font-weight-bold">Hi {{ user.username }},</p>
+            <p class="font-weight-bold profilefont">Hi {{ user.username }},</p>
         </div>
         <div class="col-12">
-            <p>
+            <p class="profilefont">
                 This is where you can create and update your personal.
             </p>
         </div>
@@ -36,10 +36,10 @@
 
     <!-- PROFILE FORM -->
     <div>
-        <form class="mt-3" action="{% url 'profile' %}" method="POST" id="profile-update-form">
+        <form class="mt-3 profilefont" action="{% url 'profile' %}" method="POST" id="profile-update-form">
             {% csrf_token %}
             {{ form|crispy }}
-            <button class="btn text-uppercase text-center">Update Information</button>
+            <button class="btn-lg text-light text-uppercase text-center" id="buttonallauth">Update Information</button>
         </form>
     </div>
 
