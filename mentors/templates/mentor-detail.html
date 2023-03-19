@@ -8,19 +8,18 @@
             <div class="col">
                 <div class="card mt-3 mb-3 text-center bg-light-grey border-0 rounded-card color-dark-purple">
                     <div class="card-body p-5">
-                        <div class="d-flex col-lg-3 col-xs-12">
+                        <div class="row">
+                            <div class="col col-12 col-lg-3">
                             {% if "placeholder" in object.image.url %}
                                 <img class="card-img-top rounded-circle detail-card-image"
                                      src="https://res.cloudinary.com/dwjq6izv5/image/upload/v1676992902/PP1/blank-profile-picture-g64a2ffd0b_640_bsdtib.png">
                             {% else %}
                                 <img class="card-img-top rounded-circle detail-card-image" src='{{ object.image.url }}'>
                             {% endif %}
-                        </div>
-                            <div class="text-left col-lg-9 col-xs-12">
+                            </div>
+                            <div class="col col-12 col-lg-9 text-left">
                                 <h5 class="card-title mt-5">
-                                <u>
                                     {{ object.name }}
-                                </u>
                                 </h5>
                                 <p><span class="text-uppercase color-pink mr-2">Expertise:</span> {{ object.category }}
                                 </p>
@@ -28,9 +27,10 @@
                                 <p><span class="text-uppercase color-pink mr-2">Linkedin:</span><a href="{{ object.linkedin }}" target="_blank">{{ object.linkedin }}</a>
                                 </p>
                             </div>
+                        </div>
                         <hr class="border border-white"/>
                         <div class="text-left mt-4">
-                            <p class="text-uppercase color-pink text-small"><u>Biography</u></p>
+                            <p class="text-uppercase color-pink text-small">Biography</p>
                             <p>{{ object.bio }}</p>
                         </div>
                     </div>

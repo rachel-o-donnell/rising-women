@@ -20,6 +20,13 @@
     color: #bf387c;
 }
 
+
+.header-underline-pink {
+    color: #bf387c;
+    text-decoration: underline;
+    text-underline-offset: .7rem;
+}
+
 .bg-light-grey {
     background-color: #e2e2e2;
 }
