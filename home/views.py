@@ -5,6 +5,10 @@ def index(request):
     return render(request, 'home/index.html')
 
 
+def aboutUs(request):
+    return render(request, 'home/about-us.html')
+
+
 def handler404(request, exception):
     """ Custom 404 page """
     return render(request, "errors/404.html", status=404)
