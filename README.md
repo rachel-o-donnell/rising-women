@@ -239,7 +239,6 @@ GitHub Projects was used to manage the development of the site. It helped our te
 * [django-allauth](https://django-allauth.readthedocs.io/en/latest/) is an integrated set of Django applications dealing with account authentication, registration, management, and third-party (social) account authentication.
 * [JQuery - v3.5.1](https://jquery.com/) is a fast, small, and feature-rich JavaScript library.
 * [Font Awesome Kit](https://fontawesome.com/v5/docs/web/setup/use-kit) is used for its icon toolkit.
-* [django-countries, v7.2.1](https://pypi.org/project/django-countries/7.2.1/) was the Django application used to provide country choices for use with forms, and a country field for models.
 * [django-crispy-forms, v1.14.0](https://pypi.org/project/django-crispy-forms/) was used to build programmatic reusable layouts out of form components.
 * [gunicorn](https://gunicorn.org/) - a Python WSGI HTTP Server that allows us to run any Python application concurrently by running multiple processes within a single dyno
 * [pillow](https://pypi.org/project/Pillow/) - a required Python imaging library used to enable handling of images.

@@ -1,15 +1,72 @@
 from django.shortcuts import render, redirect, reverse, get_object_or_404
-# from django.views import generic, View
 from django.views.generic import ListView, DetailView
 from django.contrib import messages
 from .models import Mentor, Category, Subcategory
+from django.db.models import Q
+from django.db.models.functions import Lower
 
 
 class MentorsList(ListView):
-    """ RENDER ALL THE AVAILABLE VERIFIED MENTORS AVAILABLE """
+    """ RENDER ALL THE AVAILABLE VERIFIED MENTORS INCLUDING SEARCH QUERIES """
+
     model = Mentor
     queryset = Mentor.objects.filter(verified=True).order_by("-joined")
     template_name = "mentors-list.html"
+
+    def mentor_search(self, request):
+        mentors = self.queryset
+        query = None
+        categories = None
+        subcategories = None
+
+        if request.GET:
+            # Handle sorting
+            sort_key = request.GET.get('sort')
+            if sort_key == 'name':
+                sort_key = 'lower_name'
+                mentors = mentors.annotate(lower_name=Lower('name'))
+
+            direction = request.GET.get('direction')
+            if direction == 'desc':
+                sort_key = f'-{sort_key}'
+            if sort_key:
+                mentors = mentors.order_by(sort_key)
+
+            # Handle filtering
+            category_names = request.GET.getlist('category')
+            if category_names:
+                mentors = mentors.filter(category__name__in=category_names)
+                categories = Category.objects.filter(name__in=category_names)
+
+            subcategory_names = request.GET.getlist('subcategory')
+            if subcategory_names:
+                mentors = mentors.filter(
+                    subcategory__name__in=subcategory_names)
+                subcategories = Subcategory.objects.filter(
+                    name__in=subcategory_names)
+
+            # Handle search
+            if 'q' in request.GET:
+                query = request.GET['q']
+                if not query:
+                    messages.error(request,
+                                   "You didn't enter any search criteria!")
+                queries = (Q(name__icontains=query) |
+                           Q(expertise__icontains=query) |
+                           Q(bio__icontains=query))
+                mentors = mentors.filter(queries)
+
+        mentors_count = mentors.count()  # Count the number of mentors
+
+        context = {
+            'mentors': mentors,
+            'categories': categories,
+            'subcategories': subcategories,
+            'query': query,
+            'mentors_count': mentors_count,  # Pass the count to the context
+        }
+
+        return render(request, self.template_name, context)
 
 
 class MentorDetail(DetailView):
@@ -24,28 +81,3 @@ class MentorDetail(DetailView):
                                          verified=True)
         obj = get_object_or_404(queryset)
         return obj
-
-
-def mentor_search(request):
-    query = request.GET.get('q')
-    category = request.GET.get('category')
-    subcategory = request.GET.get('subcategory')
-    if query:
-        # Search mentors by name or expertise
-        mentors = Mentor.objects.filter(Q(name__icontains=query) |
-                                        Q(expertise__icontains=query))
-    elif category:
-        # Filter mentors by category
-        mentors = Mentor.objects.filter(category__name=category)
-        if subcategory:
-            # Filter mentors by subcategory
-            mentors = mentors.filter(subcategory__name=subcategory)
-    else:
-        # If no query or filter, display all mentors
-        mentors = Mentor.objects.all()
-    # Get all categories and subcategories for displaying in the search form
-    categories = Category.objects.all()
-    subcategories = Subcategory.objects.all()
-    context = {'mentors': mentors, 'categories': categories,
-               'subcategories': subcategories}
-    return render(request, 'mentor_search.html', context)
