@@ -120,3 +120,11 @@ header {
 .profilefont {
     color: #4A2879;
 }
+
+/* Mentor Detail */
+
+.mentorimg {
+    height: 50vh;
+    width: fit-content;
+    padding-top: 3%;
+}
