@@ -9,22 +9,22 @@
     <div class="row">
         <div class="col text-center mt-1">
             <!-- PAGE HEADING -->
-            <h2 class="display-5 text-center myy-5">Meet the Mentors</h2>
+            <h2 class="display-5 text-center myy-5 color-green"><u>Meet the Mentors</u></h2>
         </div>
     </div>
     <!-- INDIVIDUAL MENTOR DETAIL -->
-    <h1>{{ object.name }}</h1>
+    <h1 class="color-dark-purple"><b>{{ object.name }}</b></h1>
     <div class="card mb-3">
-        <img class="card-img-top" src="{{ object.image.url }}" alt="{{ object.name }}">
+        <img class="card-img-top mentorimg mx-auto" src="{{ object.image.url }}" alt="{{ object.name }}">
         <div class="card-body">
-            <p><strong>Expertise:</strong> {{ object.expertise }}</p>
-            <p><strong>Category:</strong> {{ object.category.name }}</p>
-            <p><strong>Subcategory:</strong> {{ object.subcategory.name }}</p>
-            <p>{{ object.bio }}</p>
+            <p class="profilefont"><strong>Expertise:</strong> {{ object.expertise }}</p>
+            <p class="profilefont"><strong>Category:</strong> {{ object.category.name }}</p>
+            <p class="profilefont" class="profilefont"><strong>Subcategory:</strong> {{ object.subcategory.name }}</p>
+            <p class="profilefont">{{ object.bio }}</p>
 
             <div>
-                <p class="h5 text-center">Learn More and Apply to be {{ object.name }}'s Mentee by creating an account with Women Rising</p>
-                <button>Register Now</button>
+                <p class="h5 text-center color-green">Learn More and Apply to be {{ object.name }}'s Mentee by creating an account with Women Rising</p>
+                <button class="btn-lg text-light" id="buttonallauth">Register Now</button>
             </div>
 
             {% if request.user.is_authenticated %}
