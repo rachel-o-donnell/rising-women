@@ -19,6 +19,10 @@ header {
     color: #4a2879;
 }
 
+.color-pink {
+    color: #bf387c;
+}
+
 .nav-link {
     font-size: .8rem;
     font-weight: 600;
@@ -39,8 +43,27 @@ header {
     font-size: .7rem;
 }
 
+.header-separator-bar {
+    height: 1.5rem;
+    background-image: linear-gradient(to bottom right, #4a2879, #bf387c);
+}
+
 .bg-light-grey {
     background-color: #e2e2e2;
+}
+
+.content {
+    font-family: 'Atkinson Hyperlegible', sans-serif;
+    margin-bottom: 5rem;
+}
+
+.rounded-card {
+    border-radius: 2rem;
+}
+
+.card-image {
+    height: 100px;
+    width: auto;
 }
 
 /* Main Section */
