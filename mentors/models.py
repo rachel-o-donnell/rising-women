@@ -27,6 +27,7 @@ class Mentor(models.Model):
     slug = models.SlugField(max_length=100, null=False, unique=True)
     name = models.CharField(max_length=120, null=False, blank=False)
     verified = models.BooleanField(null=False, default=False)
+    expertise = models.CharField(max_length=200, null=False, blank=False)
     bio = models.TextField(max_length=1000, null=False, blank=False)
     image = CloudinaryField('image', default='placeholder')
     website = models.CharField(max_length=250, null=True, blank=True)

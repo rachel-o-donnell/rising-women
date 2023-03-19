@@ -7,17 +7,26 @@
             </li>
         </ul>
         <ul class="navbar-nav mb-2 mb-lg-0 text-center">
+            <!-- SEARCH BAR -->
             <li class="nav-item">
-                <form class="d-flex ml-auto mr-2" role="search">
+                <!-- <form class="d-flex ml-auto mr-2" role="search">
                     <input class="form-control form-control-sm form-rounded me-2" type="search"
                            placeholder="Search our site" aria-label="Search">
                     <button class="btn" type="submit"><i class="bi bi-search"></i></button>
+                </form> -->
+                <form class="d-flex ml-auto mr-2" action="{% url 'mentors-list' %}" method="GET" role="search">
+                    <input class="form-control form-control-sm form-rounded me-2" type="search" name="q"
+                        placeholder="Search mentors" aria-label="Search" value="{{ query }}">
+                        <div class="input-group-append">
+                            <button class="btn" type="submit"><i class="bi bi-search"></i></button>
+                        </div>
                 </form>
             </li>
+            <!-- End of Search Bar -->
             {% if request.user.is_authenticated %}
                 <li class="nav-item mr-2">
-                    <span class="nav-link nav-link-small"><i
-                            class="bi bi-person-fill-check mr-1"></i>{{ request.user.username }}</span>
+                    <span class="nav-link nav-link-small">
+                        <i class="bi bi-person-fill-check mr-1"></i>{{ request.user.username }}</span>
                 </li>
             {% endif %}
             <li class="nav-item mr-2 dropdown">
@@ -30,10 +39,7 @@
                 </a>
                 <div class="dropdown-menu border-0" aria-labelledby="user-options">
                     {% if request.user.is_authenticated %}
-                        {% if request.user.is_superuser %}
-                            <a href="" class="dropdown-item">Product Management</a>
-                        {% endif %}
-                        <a href="" class="dropdown-item">My Profile</a>
+                        <a href="{% url 'profile' %}" class="dropdown-item">My Profile</a>
                         <a href="{% url 'account_logout' %}" class="dropdown-item">Logout</a>
                     {% else %}
                         <a href="{% url 'account_signup' %}" class="dropdown-item">Register</a>
