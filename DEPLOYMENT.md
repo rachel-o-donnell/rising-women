@@ -190,8 +190,21 @@ Save the **settings.py** file, add, commit and then git push these changes.
 
 **9. Set up Cloudinary to host our static files and images**
 
+1. Visit the Cloudinary website
+2. Click on the Sign Up For Free button
+3. Provide your name, email address and choose a password
+4. For Primary interest, you can choose Programmable Media for image and video API
+5. Optional: edit your assigned cloud name to something more memorable
+6. Click Create Account
+7. Verify your email and you will be brought to the dashboard
 
+* Install cloudinary:
+  dj3-cloudinary-storage==0.0.6
 
+* Add Cloudinary API key to env.py file
+```python
+os.environ['CLOUDINARY_URL'] = 'Cloudinary_API_key'
+```
 ---
 
 ## How to Fork the repository
