@@ -8,7 +8,7 @@ from .models import Mentor, Category, Subcategory
 class Mentor(admin.ModelAdmin):
     prepopulated_fields = {'slug': ('name',)}
     list_filter = ('category', 'subcategory')
-    search_fields = ['category', 'subcategory',]
+    search_fields = ['category', 'subcategory', ]
     list_display = ('name', 'verified', 'expertise', 'bio', 'image',
                     'website', 'linkedin', 'category',
                     'joined',)
