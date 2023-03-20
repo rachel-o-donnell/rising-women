@@ -8,10 +8,6 @@
     box-sizing: border-box;
 }
 
-header {
-    font-family: 'Montserrat', sans-serif;
-}
-
 .color-green {
     color: #2aad74;
 }
@@ -24,29 +20,11 @@ header {
     color: #bf387c;
 }
 
-.nav-link {
-    font-size: .8rem;
-    font-weight: 600;
-    text-transform: uppercase;
-    color: #2aad74;
-}
 
-.nav-link:hover {
-    color: #bf387c;
-}
-
-.nav-link-active {
+.header-underline-pink {
     color: #bf387c;
     text-decoration: underline;
-}
-
-.nav-link-small {
-    font-size: .7rem;
-}
-
-.header-separator-bar {
-    height: 1.5rem;
-    background-image: linear-gradient(to bottom right, #4a2879, #bf387c);
+    text-underline-offset: .7rem;
 }
 
 .bg-light-grey {
@@ -69,11 +47,6 @@ header {
     background-color: #6e639a;
 }
 
-.content {
-    font-family: 'Atkinson Hyperlegible', sans-serif;
-    margin-bottom: 5rem;
-}
-
 .rounded-card {
     border-radius: 2rem;
 }
@@ -81,6 +54,54 @@ header {
 .rounded-large {
     border-radius: 1rem;
 }
+
+/* Header and Navigation */ 
+
+header {
+    font-family: 'Montserrat', sans-serif;
+}
+
+.header-separator-bar {
+    height: 1.5rem;
+    background-image: linear-gradient(to bottom right, #4a2879, #bf387c);
+}
+
+.nav-link {
+    font-size: .8rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: #2aad74;
+}
+
+.nav-link:hover {
+    color: #bf387c;
+}
+
+.nav-link-active {
+    color: #bf387c;
+    text-decoration: underline;
+}
+
+.nav-link-small {
+    font-size: .7rem;
+}
+
+/* Main Section */
+
+.colorline {
+    background: linear-gradient(135deg, #4A2879, #BF387C) !important; 
+}
+
+.gradient-background {
+    background-image: linear-gradient(to bottom right, #4a2879, #bf387c);
+}
+
+.content {
+    font-family: 'Atkinson Hyperlegible', sans-serif;
+    margin-bottom: 5rem;
+}
+
+/* Mentor Details */
 
 .card-image {
     height: 100px;
@@ -91,12 +112,6 @@ header {
     height: 200px;
     width: auto;
 }
-
-.gradient-background {
-    background-image: linear-gradient(to bottom right, #4a2879, #bf387c);
-}
-
-/* Main Section */
 
 /* bootstrap toasts */
 
@@ -140,21 +155,4 @@ header {
 }
 .form-rounded {
     border-radius: 1rem;
-}
-
-.colorline {
-    background: linear-gradient(135deg, #4A2879, #BF387C) !important; 
-}
-
-/* Profile */
-.profilefont {
-    color: #4A2879;
-}
-
-/* Mentor Detail */
-
-.mentorimg {
-    height: 50vh;
-    width: fit-content;
-    padding-top: 3%;
 }

@@ -11,7 +11,7 @@
 
 # Project Overview
 Rising Women is a platform developed by women for women in technology to help mitigate the lack of representation in technical roles, particularly in leadership positions by:
-* promoting awareness of leading women in technology by curating a list of successful, inspiring role models
+* promoting awareness of leading women in technology by enabling users to curate a list of successful, inspiring role models
 * enabling women leaders in the technology sector to mentor and support other women through insights-, skills- and strategies-sharing
 * providing opportunities for women technologists to learn from, be inspired by and network with other women and women role models in the field
 
@@ -52,7 +52,7 @@ Rising Women is Team 6: Code Sisters' project submission for Code Institute's Wo
 * [Agile Methodology](#agile-methodology)
     * [GitHub Projects](#github-projects)
 * [Features](#features)
-    * [Mentor Expetise Categorization](#mentor-expertise-categorization)
+    * [Mentor Expertise Categorization](#mentor-expertise-categorization)
     * [Defensive Programming](#defensive-programming)
     * [Accessibility](#accessibility)
     * [Extra Meta Tags for Specific Pages](#extra-meta-tags-for-specific-pages)
@@ -116,8 +116,9 @@ We aim to help combat the feeling of being isolated and excluded by creating opp
 3. Provide a safe, easy to use platform for networking with other women in the field
 
 ## Scope Plane
-* Feature Planning
-When planning the Rising Women's features and scope, we drew up a the Desirability, Importance and Viability analysis of all the features to be included in the project, and ranked each of these by order of importance from low (1) to high (5). The features that ranked the highest will be prioritised and delivered as part of the MVP. The target users for each ranked feature were also included.
+
+**Feature Planning**
+When planning the Rising Women's features and scope, we drew up a Desirability, Importance and Viability analysis of all the features to be included in the project, and ranked each of these by order of importance from low (1) to high (5). The features that ranked the highest will be prioritised and delivered as part of the MVP. The target users for each ranked feature were also included.
 
 | # | Feature | Target User | Desirability | Importance | Viability  | Delivered |
 | --- | --- | --- | --- | --- | --- | --- |
@@ -135,18 +136,21 @@ When planning the Rising Women's features and scope, we drew up a the Desirabili
 | 10 | Top Navigation to include: my account (my profile, logout) and bookmark | Logged In Superadmins | 5 | 5 | 5 | ✅ |
 | 11 | Main Navigation to include links to: mentors, inspirational women in tech, about us | All Users <sup>1</sup> | 5 | 5 | 5 | ✅ |
 | Mentors |  |  |  |  |  |  |
-| 12 | Featured Mentors | All Users <sup>1</sup> | 5 | 5 | 5 | ✅ |
+| 12 | List of Mentors | All Users <sup>1</sup> | 5 | 5 | 5 | ✅ |
 | 13 | Mentor Categories (Expertise) | All Users <sup>1</sup> | 5 | 5 | 5 | ✅ |
-| 14 | Mentor Detail page to include: [add-fields-here] | All Users <sup>1</sup> | 5 | 5 | 5 | ✅ |
+| 14 | Mentor Detail page | All Users <sup>1</sup> | 5 | 5 | 5 | ✅ |
+| Profiles |  |  |  |  |  |  |
+| 15 |  User Profile page |  All Users <sup>1</sup> | 5 | 5 | 5 | ✅ |
+| 16 | Registered Users Curate Their Own Content All Users <sup>1</sup> | 5 | 5 | 5 | ✅ |
+| 17 | Registered Users Update Their Own Content All Users <sup>1</sup> | 5 | 5 | 5 | ✅ |
 | Bookmark |  |  |  |  |  |  |
-| 15 | Individual User's Bookmark - Create, Read, Update and Delete Bookmark | Logged In Users | 5 | 5 | 5 | ✅ |
+| 18 | Individual User's Bookmark - Create, Read, Update and Delete Bookmark | Logged In Users | 5 | 5 | 5 | ✅ |
 | Digital Marketing |  |  |  |  |  |  |
-| 16 | Social Media Presence | Superadmins | 5 | 5 | 5 | ✅ |
+| 19 | Social Media Presence | Superadmins | 5 | 5 | 5 | ✅ |
 | Email Marketing |  |  |  |  |  |  |
-| 17 | Email Subscription, Powered by MailChimp | Registered Subscribers | 3 | 3 | 3 | ❌ |
+| 20 | Email Subscription, Powered by MailChimp | Registered Subscribers | 3 | 3 | 3 | ❌ |
 | Contact Us |  |  |  |  |  |  |
-| 18 | Contact Form | All Users <sup>1</sup> | 3 | 3 | 3 | ❌ |
-
+| 21 | Contact Form | All Users <sup>1</sup> | 3 | 3 | 3 | ❌ |
 
 1. All Users: Site Visitors, Logged In Users, Superadmins
 
@@ -159,7 +163,9 @@ When planning the Rising Women's features and scope, we drew up a the Desirabili
 ### Database Design
 * Database ERD
 **Entity Relationship Diagram**
-![ERD Version 1](./documentation/rising-women-erd-v1.png)
+* [ERD Version 1](./documentation/rising-women-erd-v1.png)
+
+* ERV Version 2 ![ERD Version2](./documentation/rising-women-erd-v2.png)
 
 * Data Modelling
     * User Model
@@ -167,7 +173,6 @@ When planning the Rising Women's features and scope, we drew up a the Desirabili
     * Category Model
     * Subcategory Model
     * Mentor Model
-    * Bookmark Model
 
 ### User Stories
 | #                                | Issue ID | Target User | User Story                                                                                                                                                                                                 |
@@ -214,7 +219,7 @@ GitHub Projects was used to manage the development of the site. It helped our te
 
 
 # Features
-* Mentor Expetise Categorization
+* Mentor Expertise Categorization
 * Defensive Programming
 * Accessibility
 * Extra Meta Tags for Specific Pages
@@ -266,15 +271,20 @@ Please also refer to [TESTING.md](./TESTING.md) file for:
 * Known bugs
 # Deployment and Local Development
 ## Deployment
-The deployment section covers the following:
+Please refer to [DEPLOYMENT.md](./DEPLOYMENT.md) file for the steps to:
+
 * Creating the database to be used in production
-    * Instructions to common question: *"What if you didn't use fixtures in your project?"*
 * Deploying to Heroku
 * Setting up Cloudinary for hosting media files
 
-## Local Development
+### Local Development
+Please refer to [DEPLOYMENT.md](./DEPLOYMENT.md) file for steps to:
 * How to Fork
 * How to Clone
-# Credits
-# Acknowledgements
 
+# Credits
+
+Code Institute's Boutique Ado walkthrough.
+https://github.com/JoyZadan/shop-kbeauty
+
+# Acknowledgements

@@ -11,8 +11,8 @@
                     <div class="card mt-3 mb-3 text-center bg-light-grey border-0 rounded-card color-dark-purple">
                         <div class="card-body">
                             {% if "placeholder" in mentor.image.url %}
-                                <img class="card-img-top rounded-circle card-image"
-                                     src="https://res.cloudinary.com/dwjq6izv5/image/upload/v1676992902/PP1/blank-profile-picture-g64a2ffd0b_640_bsdtib.png">
+                                <img class="card-img-top rounded-circle card-image" src="https://res.cloudinary.com/dwjq6izv5/image/upload/v1676992902/PP1/blank-profile-picture-g64a2ffd0b_640_bsdtib.png"
+                                alt="image of a mentor">
                             {% else %}
                                 <img class="card-img-top rounded-circle card-image" src='{{ mentor.image.url }}'>
                             {% endif %}
