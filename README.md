@@ -161,11 +161,12 @@ When planning the Rising Women's features and scope, we drew up a Desirability, 
 ### Information Architecture
 * Site Map
 ### Database Design
-* Database ERD
+* Database
+
 **Entity Relationship Diagram**
 * [ERD Version 1](./documentation/rising-women-erd-v1.png)
-
-* ERV Version 2 ![ERD Version2](./documentation/rising-women-erd-v2.png)
+* [ERD Version2](./documentation/rising-women-erd-v2.png)
+* ERD Version 3 - FINAL ![ERD Version3](./documentation/rising-women-erd-v3.png)
 
 * Data Modelling
     * User Model
@@ -173,6 +174,7 @@ When planning the Rising Women's features and scope, we drew up a Desirability, 
     * Category Model
     * Subcategory Model
     * Mentor Model
+    * Contact Model
 
 ### User Stories
 | #                                | Issue ID | Target User | User Story                                                                                                                                                                                                 |
