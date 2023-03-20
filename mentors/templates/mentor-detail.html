@@ -21,10 +21,16 @@
                                 <h5 class="card-title mt-5">
                                     {{ object.name }}
                                 </h5>
-                                <p><span class="text-uppercase color-pink mr-2">Expertise:</span> {{ object.category }}
-                                </p>
+                                <p class="text-uppercase color-pink">Expertise: <span class="">{{ object.expertise }}</span></p>
+                                <p><span class="mr-2"><em>category:</em></span> {{ object.category }}
+                                {% if request.user.is_authenticated %}
                                 <p><span class="text-uppercase color-pink mr-2">Website:</span><a href="{{ object.website }}" target="_blank">{{ object.website }}</a></p>
                                 <p><span class="text-uppercase color-pink mr-2">Linkedin:</span><a href="{{ object.linkedin }}" target="_blank">{{ object.linkedin }}</a>
+                                {% else %}
+                                <p>Please create an account or login to contact the mentor.</p>
+                                <a href="{% url 'account_signup' %}">Sign Up</a>
+                                <a href="{% url 'account_login' %}">Login</a>
+                                {% endif %}
                                 </p>
                             </div>
                         </div>
