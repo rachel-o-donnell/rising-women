@@ -7,9 +7,13 @@ class ContactAdmin(admin.ModelAdmin):
     Admin class for the Contact model.
     """
     list_display = [
-        'contact_fullname',
-        'contact_email',
-        'expertise_areas',
+        'fullname',
+        'email',
+        'areas_of_expertise',
+        'website',
+        'linkedin',
+        'bio',
+        'why_you_want_to_become_a_mentor',
         'date',
     ]
 
