@@ -101,6 +101,10 @@ header {
     margin-bottom: 5rem;
 }
 
+.catbut:hover{
+    cursor: text !important;
+   }
+
 /* Mentor Details */
 
 .card-image {
