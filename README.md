@@ -242,10 +242,74 @@ Monserrat was selected for headings, and Atkinson Hyperlegible for body text (hi
 The main image, and the headshots of Mentors are from www.freepix.com, and are used for eductional purposes only
 # Agile Methodology
 ## **GitHub Projects**
+
+Find out project board here
+*[project board](https://github.com/users/rachel-o-donnell/projects/10)
+
+We broke the project into 5 iterations over the course of five days
+
 GitHub Projects was used to manage the development of the site. It helped our team to break down large issues into smaller issues and how these fit into the overall goals of implementing specific features we wanted for the site. We also used labels to distinguish the issues which are part of the setup, of the documentation, the must haves and the enhancements, and the required validations.
 
+![Iteration 1](./documentation/agile-projectboard1.png)
+![Iteration 1](./documentation/agile-project-board4.png)
+![Iteration 1](./documentation/agile-iteration-5.png)
 
 # Features
+
+# Welcome to Rising Women a project put together by Code Sisters for the Code Institute Hackathon March 2023 
+
+## Project overview/Issues tackled Info from CI HACKATHON Requirements
+
+[View live site](https://rising-women.herokuapp.com/)
+
+### **Features**
+
+**General**
+
+Toast messages: Display according to the user actions.
+
+**Navbar**
+
+_Unregister and Register user_
+
+Meet the Hackathon Team: Brings the user to the About Us page
+
+My account: Open the options for Register and Login
+            Register: Opens the form for signUp
+            My Profile: Opens the user profile's page
+            Login: Opens the form for signIn
+
+SignOut: Confirmation for this action.
+
+Rising Women: Brings the user to home page
+
+Home: Brings the user to home page
+
+Meet the Mentors: Brings the user to list of mentors
+
+Become a Mentor: Open the form for apply to be a mentor
+
+**Footer**
+
+_Unregister and Register user_
+
+Meet the Hackathon Team: Brings the user to the About Us
+
+**Meet the Mentor Page**
+
+_Unregister User_
+
+Mentor card: View full profile: Brings user to the mentor's details page without access to their personal links
+
+_Register User_
+
+Mentor card: View full profile: Brings user to the mentor's details page access to their personal links
+
+**About us**
+
+_Unregister and Register user_
+
+Display the team information.
 * Mentor Expertise Categorization
 * Defensive Programming
 * Accessibility
@@ -254,6 +318,7 @@ GitHub Projects was used to manage the development of the site. It helped our te
 * Bookmark
 * Site Features Common to All Pages
 * Site Pages
+
 # Future Development, Iteration and Implementation
 # Technologies Used
 ## Languages Used
