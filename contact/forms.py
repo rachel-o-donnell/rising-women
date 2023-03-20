@@ -11,13 +11,13 @@ class ContactForm(forms.ModelForm):
     class Meta:
         model = Contact
         fields = [
-            'contact_fullname',
-            'contact_email',
-            'expertise_areas',
-            'contact_website',
-            'contact_linkedin',
-            'contact_bio',
-            'why_mentor',
+            'fullname',
+            'email',
+            'areas_of_expertise',
+            'website',
+            'linkedin',
+            'bio',
+            'why_you_want_to_become_a_mentor',
         ]
 
     def __init__(self, *args, **kwargs):
