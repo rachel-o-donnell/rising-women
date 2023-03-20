@@ -101,6 +101,10 @@ header {
     margin-bottom: 5rem;
 }
 
+.catbut:hover{
+    cursor: text !important;
+   }
+
 /* Mentor Details */
 
 .card-image {
@@ -153,6 +157,11 @@ header {
 #buttonallauth {
     background-color: #4A2879;
 }
+
+#buttonallauth {
+    background-color: #4A2879;
+}
+
 .form-rounded {
     border-radius: 1rem;
 }

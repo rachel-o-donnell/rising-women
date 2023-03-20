@@ -157,9 +157,9 @@ When planning the Rising Women's features and scope, we drew up a Desirability, 
 
 ## Structure Plane
 ### Interaction Design
-* User Flow Diagram
-### Information Architecture
-* Site Map
+
+* User Flow Diagram ![User Journey Flow](./documentation/rising-women-user-flow-diagram.png)
+
 ### Database Design
 * Database
 
@@ -168,13 +168,37 @@ When planning the Rising Women's features and scope, we drew up a Desirability, 
 * [ERD Version2](./documentation/rising-women-erd-v2.png)
 * ERD Version 3 - FINAL ![ERD Version3](./documentation/rising-women-erd-v3.png)
 
+This ER diagram captures the relationships between real-world entities. The entities are the data points of objects such as persons, places and things and together with their attributes, compose their domain, ie, their individual table. The cardinality (relationships) between these entities are then mapped and identified.
+
 * Data Modelling
-    * User Model
-    * UserProfile
-    * Category Model
-    * Subcategory Model
-    * Mentor Model
+    As evidenced by the ERD discussed above, the data model type used for this project is the Relational Model.
+    * **User Model**
+    - The User model is a component of Django's Authentication system and contains information about the user.
+    - The User model contains the following fields: username, email, first_name, last_name, password, is_staff, is_active, is_superuser, date_joined, and last_login.
+
+    * **UserProfile Model**
+        - The UserProfile model is an extension of the Django User model and has a one-to-one relationship with it.
+        - The UserProfile model contains the following fields: user, is_mentor, is_mentee, default_town_or_city, executive_summary, technical_skills, leadership_skills, my_achievements, my_linkedin, my_website, my_pyblished_articles, my_mentors, my_inspirational_wwomen, my_testimonials_given, my_testimonials_received
+        - The UserProfile model is included in the installed profiles application.
+
+    * **Category Model**
+        - The Category model contains the following fields: name.
+        - It is one of the models included in the installed mentors application.
+
+    * **Subcategory Model**
+        - The Subcategory model contains the following fields: name, category.
+        - It contains the Category model as a foreignkey.
+        - It is one of the models included in the installed mentors application.
+
+    * **Mentor Model**
+        - The Mentor model contains the following fields: name, slug, verified, expertise, bio, image, website, linkedin, category, subcategory.
+        - It contains the Category model as a foreignkey.
+        - It contains the Subcategory model as a foreignkey.
+        - It is one of the models included in the installed mentors application.
+
     * Contact Model
+        - The Cintact model contains the following fields: fullname, email, verified, areas_of_expertise, website, linkedin, bio, why_you_want_to_become_a_mentor
+        - It is the only model included in the installed contact application.
 
 ### User Stories
 | #                                | Issue ID | Target User | User Story                                                                                                                                                                                                 |
@@ -198,16 +222,17 @@ When planning the Rising Women's features and scope, we drew up a Desirability, 
 
 ## Skeleton Plane
 * Wireframes
-![home page](https://github.com/RozWelch/rising-women/blob/roz-styling/assets/readme_images/wireframe1home.jpg)
+![home page](./documentation/)
 ![browse mentors](https://github.com/RozWelch/rising-women/blob/roz-styling/assets/readme_images/wireframe3list.jpg)
 ![mentor details](https://github.com/RozWelch/rising-women/blob/roz-styling/assets/readme_images/wireframe2bio.jpg)
 ![mentor sign up](https://github.com/RozWelch/rising-women/blob/roz-styling/assets/readme_images/wireframe4mentorform.jpg)
 * Initial Design
-![home page](https://github.com/RozWelch/rising-women/blob/roz-styling/assets/readme_images/initial_design-1.jpg)
-![browse mentors](https://github.com/RozWelch/rising-women/blob/roz-styling/assets/readme_images/initial_design-2.jpg)
-![mentor details](https://github.com/RozWelch/rising-women/blob/roz-styling/assets/readme_images/initial_design-3.jpg)
-![mentor sign up](https://github.com/RozWelch/rising-women/blob/roz-styling/assets/readme_images/initial_design-4.jpg)
-![bookmarked mentors](https://github.com/RozWelch/rising-women/blob/roz-styling/assets/readme_images/initial_design-5.jpg)
+[initial design spec](./documentation/rising_women_design_spec.pdf)
+![home page](./documentation/Screenshot%202023-03-19%20at%2013.40.25.png)
+![browse mentors](./documentation/mentor-list-page.png)
+![mentor details](./documentation/mentor-details.png)
+![mentor sign up](./documentation/apply-for-mentor-form.png)
+
 ## Surface Plane
 * Typography
 Monserrat was selected for headings, and Atkinson Hyperlegible for body text (highly legible)
