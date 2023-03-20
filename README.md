@@ -222,16 +222,17 @@ This ER diagram captures the relationships between real-world entities. The enti
 
 ## Skeleton Plane
 * Wireframes
-![home page](https://github.com/RozWelch/rising-women/blob/roz-styling/assets/readme_images/wireframe1home.jpg)
+![home page](./documentation/)
 ![browse mentors](https://github.com/RozWelch/rising-women/blob/roz-styling/assets/readme_images/wireframe3list.jpg)
 ![mentor details](https://github.com/RozWelch/rising-women/blob/roz-styling/assets/readme_images/wireframe2bio.jpg)
 ![mentor sign up](https://github.com/RozWelch/rising-women/blob/roz-styling/assets/readme_images/wireframe4mentorform.jpg)
 * Initial Design
-![home page](https://github.com/RozWelch/rising-women/blob/roz-styling/assets/readme_images/initial_design-1.jpg)
-![browse mentors](https://github.com/RozWelch/rising-women/blob/roz-styling/assets/readme_images/initial_design-2.jpg)
-![mentor details](https://github.com/RozWelch/rising-women/blob/roz-styling/assets/readme_images/initial_design-3.jpg)
-![mentor sign up](https://github.com/RozWelch/rising-women/blob/roz-styling/assets/readme_images/initial_design-4.jpg)
-![bookmarked mentors](https://github.com/RozWelch/rising-women/blob/roz-styling/assets/readme_images/initial_design-5.jpg)
+[initial design spec](./documentation/rising_women_design_spec.pdf)
+![home page](./documentation/Screenshot%202023-03-19%20at%2013.40.25.png)
+![browse mentors](./documentation/mentor-list-page.png)
+![mentor details](./documentation/mentor-details.png)
+![mentor sign up](./documentation/apply-for-mentor-form.png)
+
 ## Surface Plane
 * Typography
 Monserrat was selected for headings, and Atkinson Hyperlegible for body text (highly legible)
