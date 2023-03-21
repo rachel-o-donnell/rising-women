@@ -32,7 +32,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;700&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&display=swap"
+        rel="stylesheet">
     {% endblock %}
 
     {% block corejs %}
@@ -51,7 +52,7 @@
     <title>{% block extra_title %}{% endblock %} Rising Women</title>
 </head>
 
-<body>
+<body class="d-flex flex-column min-vh-100">
     {% include 'includes/header.html' %}
 
     <!--Toasts-->
@@ -76,8 +77,8 @@
     {% endblock %}
 
     <div class="content">
-    {% block content %}
-    {% endblock %}
+        {% block content %}
+        {% endblock %}
     </div>
 
     {% include 'includes/footer.html' %}
