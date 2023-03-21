@@ -1,6 +1,6 @@
 # **RISING WOMEN**
 
-![amiresponsive mockups of project](ADD-LINK-HERE)
+![amiresponsive mockups of project](./documentation/am-i-responsive-rising-women.png)
 
 **[Link to the deployed site](https://rising-women.herokuapp.com/)**
 
@@ -18,6 +18,24 @@ Rising Women is a platform developed by women for women in technology to help mi
 This platform was built using Django, Python, JavaScript and Bootstrap 4. The site was deployed on Heroku and uses Cloudinary for cloud storage.
 
 Rising Women is Team 6: Code Sisters' project submission for Code Institute's Women in Technology Hackathon, March 2023.
+
+**21 March Update:**
+Rising Women won 1st Place in the recently concluded Women in Tech Hackathon organised by [Code Institute](
+https://hackathon.codeinstitute.net/showcase/122/).
+
+## Meet the Development Team
+* [Rachel O'Donnell](https://www.linkedin.com/in/rachel-o-donnell-397aa2180/)
+    * Scrum Master and Code Institute Student and expected to graduate in May 2023. *1st time as a scrum master and copywriter of the site. Grateful for this incredible opportunity to work on an all female team and to push me further out of my comfort zone and learn so much from my team members.*
+* [Eleanor Bucke](https://www.linkedin.com/in/eleanor-bucke-mehmood-38a5b6222/)
+    * Code Institute Student and expected to graduate in May 2023. *I worked on toasts, tests and front end. I loved having the chance to work with other students and learn more about working with teams and using git for version control.*
+* [Özlem Halafir](https://www.linkedin.com/in/ozlem-hafalir/)
+    * Code Institute Student and expected to graduate in July 2023. *I feel like my Bootstrap studies have paid off, and it was a good Chance to work with other brilliant women while pushing myself to learn new things that I didnt know in a mostly fun way*
+* [Joy Zadan](https://www.linkedin.com/in/joy-zadan/)
+    * Code Institute Alumna, graduated with Distinction, February 2023. *Full Stack Developer. This is my fifth hackathon but first time to work with an all women team. It's a great experience to work with truly talented and dedicated teammates*
+* [Roz Welch](https://www.linkedin.com/in/roslyn-w-2983a9/)
+    * Code Institute Student and expected to graduate in May 2023. *Design of front end, testing, and validation. Fantastic opportunity to work with such an amazing, talented team. Enjoyed the experience and learned so much!*
+* [Ivette McDermott](https://www.linkedin.com/in/ivette-mc-dermott/)
+    * Code Institute Student and expected to graduate in May 2023. *Working with a full female team was a completely different and rewarding experience.*
 
 ---
 **TABLE OF CONTENTS**
@@ -157,9 +175,9 @@ When planning the Rising Women's features and scope, we drew up a Desirability, 
 
 ## Structure Plane
 ### Interaction Design
-* User Flow Diagram
-### Information Architecture
-* Site Map
+
+* User Flow Diagram ![User Journey Flow](./documentation/rising-women-user-flow-diagram.png)
+
 ### Database Design
 * Database
 
@@ -168,13 +186,37 @@ When planning the Rising Women's features and scope, we drew up a Desirability, 
 * [ERD Version2](./documentation/rising-women-erd-v2.png)
 * ERD Version 3 - FINAL ![ERD Version3](./documentation/rising-women-erd-v3.png)
 
+This ER diagram captures the relationships between real-world entities. The entities are the data points of objects such as persons, places and things and together with their attributes, compose their domain, ie, their individual table. The cardinality (relationships) between these entities are then mapped and identified.
+
 * Data Modelling
-    * User Model
-    * UserProfile
-    * Category Model
-    * Subcategory Model
-    * Mentor Model
+    As evidenced by the ERD discussed above, the data model type used for this project is the Relational Model.
+    * **User Model**
+    - The User model is a component of Django's Authentication system and contains information about the user.
+    - The User model contains the following fields: username, email, first_name, last_name, password, is_staff, is_active, is_superuser, date_joined, and last_login.
+
+    * **UserProfile Model**
+        - The UserProfile model is an extension of the Django User model and has a one-to-one relationship with it.
+        - The UserProfile model contains the following fields: user, is_mentor, is_mentee, default_town_or_city, executive_summary, technical_skills, leadership_skills, my_achievements, my_linkedin, my_website, my_pyblished_articles, my_mentors, my_inspirational_wwomen, my_testimonials_given, my_testimonials_received
+        - The UserProfile model is included in the installed profiles application.
+
+    * **Category Model**
+        - The Category model contains the following fields: name.
+        - It is one of the models included in the installed mentors application.
+
+    * **Subcategory Model**
+        - The Subcategory model contains the following fields: name, category.
+        - It contains the Category model as a foreignkey.
+        - It is one of the models included in the installed mentors application.
+
+    * **Mentor Model**
+        - The Mentor model contains the following fields: name, slug, verified, expertise, bio, image, website, linkedin, category, subcategory.
+        - It contains the Category model as a foreignkey.
+        - It contains the Subcategory model as a foreignkey.
+        - It is one of the models included in the installed mentors application.
+
     * Contact Model
+        - The Cintact model contains the following fields: fullname, email, verified, areas_of_expertise, website, linkedin, bio, why_you_want_to_become_a_mentor
+        - It is the only model included in the installed contact application.
 
 ### User Stories
 | #                                | Issue ID | Target User | User Story                                                                                                                                                                                                 |
@@ -197,30 +239,96 @@ When planning the Rising Women's features and scope, we drew up a Desirability, 
 
 
 ## Skeleton Plane
-* Wireframes
-![home page](https://github.com/RozWelch/rising-women/blob/roz-styling/assets/readme_images/wireframe1home.jpg)
-![browse mentors](https://github.com/RozWelch/rising-women/blob/roz-styling/assets/readme_images/wireframe3list.jpg)
-![mentor details](https://github.com/RozWelch/rising-women/blob/roz-styling/assets/readme_images/wireframe2bio.jpg)
-![mentor sign up](https://github.com/RozWelch/rising-women/blob/roz-styling/assets/readme_images/wireframe4mentorform.jpg)
+* ### Wireframes
+![home page](./assets/readme_images/wireframe1home.jpg)
+![browse mentors](./assets/readme_images/wireframe3list.jpg)
+![mentor details](./assets/readme_images/wireframe2bio.jpg)
+![mentor sign up](./assets/readme_images/wireframe4mentorform.jpg)
+
 * Initial Design
-![home page](https://github.com/RozWelch/rising-women/blob/roz-styling/assets/readme_images/initial_design-1.jpg)
-![browse mentors](https://github.com/RozWelch/rising-women/blob/roz-styling/assets/readme_images/initial_design-2.jpg)
-![mentor details](https://github.com/RozWelch/rising-women/blob/roz-styling/assets/readme_images/initial_design-3.jpg)
-![mentor sign up](https://github.com/RozWelch/rising-women/blob/roz-styling/assets/readme_images/initial_design-4.jpg)
-![bookmarked mentors](https://github.com/RozWelch/rising-women/blob/roz-styling/assets/readme_images/initial_design-5.jpg)
+[initial design spec](./documentation/rising_women_design_spec.pdf)
+![home page](./documentation/Screenshot%202023-03-19%20at%2013.40.25.png)
+![browse mentors](./documentation/mentor-list-page.png)
+![mentor details](./documentation/mentor-details.png)
+![mentor sign up](./documentation/apply-for-mentor-form.png)
+
 ## Surface Plane
 * Typography
 Monserrat was selected for headings, and Atkinson Hyperlegible for body text (highly legible)
 * Colour Palette
-![fonts and colour pallet](https://github.com/RozWelch/rising-women/blob/roz-styling/assets/readme_images/initial_design_fonts_colourpallet.jpg)
+![fonts and colour pallet](./assets/readme_images/initial_design_fonts_colourpallet.jpg)
 * Imagery
 The main image, and the headshots of Mentors are from www.freepix.com, and are used for eductional purposes only
 # Agile Methodology
 ## **GitHub Projects**
+
+Find out project board here:
+* [project board](https://github.com/users/rachel-o-donnell/projects/10)
+
+We broke the project into 5 iterations over the course of five days.
+
 GitHub Projects was used to manage the development of the site. It helped our team to break down large issues into smaller issues and how these fit into the overall goals of implementing specific features we wanted for the site. We also used labels to distinguish the issues which are part of the setup, of the documentation, the must haves and the enhancements, and the required validations.
 
+![Iteration 1](./documentation/agile-projectboard1.png)
+![Iteration 1](./documentation/agile-project-board4.png)
+![Iteration 1](./documentation/agile-iteration-5.png)
 
 # Features
+
+# Welcome to Rising Women a project put together by Code Sisters for the Code Institute Hackathon March 2023
+
+## Project overview/Issues tackled Info from CI HACKATHON Requirements
+
+[View live site](https://rising-women.herokuapp.com/)
+
+### **Features**
+
+**General**
+
+Toast messages: Display according to the user actions.
+
+**Navbar**
+
+_Unregister and Register user_
+
+Meet the Hackathon Team: Brings the user to the About Us page
+
+My account: Open the options for Register and Login
+            Register: Opens the form for signUp
+            My Profile: Opens the user profile's page
+            Login: Opens the form for signIn
+
+SignOut: Confirmation for this action.
+
+Rising Women: Brings the user to home page
+
+Home: Brings the user to home page
+
+Meet the Mentors: Brings the user to list of mentors
+
+Become a Mentor: Open the form for apply to be a mentor
+
+**Footer**
+
+_Unregister and Register user_
+
+Meet the Hackathon Team: Brings the user to the About Us
+
+**Meet the Mentor Page**
+
+_Unregister User_
+
+Mentor card: View full profile: Brings user to the mentor's details page without access to their personal links
+
+_Register User_
+
+Mentor card: View full profile: Brings user to the mentor's details page access to their personal links
+
+**About us**
+
+_Unregister and Register user_
+
+Display the team information.
 * Mentor Expertise Categorization
 * Defensive Programming
 * Accessibility
@@ -229,6 +337,7 @@ GitHub Projects was used to manage the development of the site. It helped our te
 * Bookmark
 * Site Features Common to All Pages
 * Site Pages
+
 # Future Development, Iteration and Implementation
 # Technologies Used
 ## Languages Used
