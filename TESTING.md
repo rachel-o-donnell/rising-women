@@ -54,21 +54,22 @@ At the project inception, we installed [PyCodeStyle](https://pycodestyle.pycqa.o
 ### Lighthouse Report
 [Chrome DevTools' Lighthouse](https://developer.chrome.com/docs/lighthouse/overview/) was used to test the performance, accessibility, best practices and SEO of the site
 #### Desktop
-| Page | Performance (%) | Accessibility (%) | Best Practices (%) | SEO (%) | If score is below 90% |
-| :-- | :-: | :-: | :-: | :-: | :-- |
-| [add-here-page-name](add-here-link-to-page-validation-screenshot) | [add-here-performance-score] | [add-here-accessibility-score] | [add-here-best-practices-score] | [add-here-seo-score] | [add-here-rationale-if-below-80-percent] |
-#### Mobile
-| Page | Performance (%) | Accessibility (%) | Best Practices (%) | SEO (%) | If score is below 90% |
-| :-- | :-: | :-: | :-: | :-: | :-- |
-| [add-here-page-name](add-here-link-to-page-validation-screenshot) | [add-here-performance-score] | [add-here-accessibility-score] | [add-here-best-practices-score] | [add-here-seo-score] | [add-here-rationale-if-below-80-percent] |
-### WAVE Web Accessibility Evaluation Tool
-[WAVE](https://wave.webaim.org/) was used to ensure that Rising Women's content is also accessible to individuals with disabilities. WAVE can identify many accessibility and Web Content Accessibility Guideline (WCAG) errors, which are then corrected following the results of the initial evaluation.
+### <u>Lighthouse</u>
+|Page | Mobile  | Computer|
+| ------------- | ------------- |------------- |
+| Index | <img src="documentation/index_lighthouse_mobile.png" width="250">| <img src="documentation/index_lighthouse_desktop.png" width="250">
+| Register |<img src="documentation/allauth_register_lighthouse_mobile.png" width="250">| <img src="documentation/allauth_register_lighthouse_desktop.png" width="250">
+| Sign In |<img src="documentation/allauth_login_lighthouse_mobile.png" width="250">| <img src="documentation/allauth_login_lighthouse_desktop.png" width="250">
+| Logout |<img src="documentation/allauth_logout_lighthouse_mobile.png" width="250">| <img src="documentation/allauth_logout_lighthouse_desktop.png" width="250">
+| Add A Post |<img src="markdown/maddapost.png" width="250"> |<img src="markdown/caddapost.png" width="250">
+
 
 In order to fully validate the page, we used the WAVE Chrome extension. This enabled our team to test the pages that require user authentication.
 
 | Page | WAVE This Page Result | Reasons for not fixing the contrast errors, if any |
-| :-- | --- | --- |
-| [add-here-page-name] | [add-here-if-error-or-no-error] |  |
+| Index | <img src="documentation/index_wave.png" width="250">|
+| Index | <img src="documentation/login_wave.png" width="250">|
+| Index | <img src="documentation/logout_wave.png" width="250">|
 
 ### Django Automated Testing
 For the automated testing, the writing and running of these tests used [Django's built in test module](https://docs.djangoproject.com/en/4.1/topics/testing/overview/). For each installed application, we created a folder called tests, added the ```__init__.py``` file and the separate files for testing the views, models and forms.
@@ -86,8 +87,20 @@ We also used coverage to generate the report and find out the percentage of stat
 ### Testing User Stories
 [copy-and-paste-below-user-stories]
 ### **User Stories**
-| **User Story #** | **As a/an** | **I want to be able to...** | **So that I can...** | **How was this achieved** | **Evidence**
+| **User Story #** | **As a/an** | **I want to be able to...** | **So that I can...** | **How was this achieved** | **RESULT**
 | :-- | :-- | :-- | :-- | :-- | :-- |
+| As a user, I can click on Register button on Home Page so that I can navigate to Registration Page.  | PASS |
+| As a user, in the Registration Page I can fill a form with my name, my surname, my e-mail address, my phone number so that I can create an account as a mentee. | PASS |
+| As a user, I can click on Register button on Home Page so that I can navigate to Registration Page. | PASS |  
+| As a user, in the Registration Page I can fill a form with my name, my surname, my e-mail address, my phone number so that I can create an account as a mentee. |  PASS |
+| As a user, I can see some "Inspirational Women in Tech" so that I can have a better motivational aspect. | PASS |
+| As a user, I can choose see a mentors skills so that I can find the right mentor for me. | PASS |
+| As a user, I can reach the mentors on Linked in and Website after registration so that I can have communication ways with mentors.| PASS |
+| As a user, I can visit mentor profiles by clicking on "view full profile" so that I can see their information , LinkedIn and website. | PASS   | 
+| As a registered user, I can go to My Account and click "Edit My Profile" so that I can update my information.| PASS |
+| As a user, I can click "Meet the hackathon team" button on Home Page so that I can have a better understanding about the people behind the product.| PASS |
+| As a user, I can click on "Become a mentor" button on nav bar so that I can apply to be a mentor.| PASS |
+
 | **VIEWING & NAVIGATION** |  |  |  |  |  |
 
 ### Full Testing
@@ -117,7 +130,7 @@ Full testing was conducted using the following physical devices:
 | # | Bugs, Errors and Issues | Solutions |
 | :--- | :--- | :--- |
 | `RelatedObjectDoesNotExist at /accounts/login/` error | A couple of users already exist before the profiles app was created and before thesignal was added, so when these users tried to login, the signal won't let them login since the username isn't new so it's trying to save the profiles which do not exist. | To fix this error, go to models.py on profiles app and temporarily adjust the signal by commenting out ```if created: instance.userprofile.save()``` and adjust the indentation for  `UserProfile.objects.create(user=instance)`. Then login as these existing users. After logging out, go back to models.py file in the profiles app and revert the adjustment made to signal. |
-| 'FATAL too many connections for role' Port 5432 failed' | A database triggered when people wanted to sign up. After much investigation and testing the database was holding on to users when signing up so initially we were having to terminate the connections from ElephantSQL and eventually made signing up with an email optional. It is not "solved" as we have not found the absolute source - though we do know it is from using an email to sign up. We also are using the free version of Elephant SQL so our functionality on searching and solving the issue is limited. | To fix this we made emails optional in settings.py|
+| 'FATAL too many connections for role' Port 5432 failed' | A database triggered when people wanted to sign up. After much investigation and testing the database was holding on to users when signing up so initially we were having to terminate the connections from ElephantSQL and eventually made signing up with an email optional. It is not "solved" as we have not found the absolute source - though we do know it is from using an email to sign up. We also are using the free version of Elephant SQL so our functionality on searching and solving the issue is limited. | To fix this we made emails optional in settings.py|  
 ### Known Bugs
 | # | Known Bugs, Errors and Issues | Justification |
 | :--- | :--- | :--- |
