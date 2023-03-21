@@ -1,6 +1,6 @@
 # **RISING WOMEN**
 
-![amiresponsive mockups of project](./documentation/am-i-responsive-rising-women.png)
+![amiresponsive mockups of project](./assets/readme_images/amiresponsive1.jpg)
 
 **[Link to the deployed site](https://rising-women.herokuapp.com/)**
 
@@ -21,7 +21,7 @@ Rising Women is Team 6: Code Sisters' project submission for Code Institute's Wo
 
 **21 March Update:**
 Rising Women won 1st Place in the recently concluded Women in Tech Hackathon organised by [Code Institute](
-https://hackathon.codeinstitute.net/showcase/122/).
+https://hackathon.codeinstitute.net/showcase/122/), 16-20 March 2023.
 
 ## Meet the Development Team
 * [Rachel O'Donnell](https://www.linkedin.com/in/rachel-o-donnell-397aa2180/)

@@ -1,6 +1,6 @@
 # **Rising Women Deployment &amp; Local Development**
 
-![amiresponsive mockups of project](ADD-LINK-HERE)
+![amiresponsive mockups of project](./assets/readme_images/amiresponsive1.jpg)
 
 **[Link to the deployed/ live site](https://rising-women.herokuapp.com/)**
 
