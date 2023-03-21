@@ -1,6 +1,6 @@
 # **RISING WOMEN**
 
-![amiresponsive mockups of project](ADD-LINK-HERE)
+![amiresponsive mockups of project](./documentation/am-i-responsive-rising-women.png)
 
 **[Link to the deployed site](https://rising-women.herokuapp.com/)**
 
@@ -18,6 +18,24 @@ Rising Women is a platform developed by women for women in technology to help mi
 This platform was built using Django, Python, JavaScript and Bootstrap 4. The site was deployed on Heroku and uses Cloudinary for cloud storage.
 
 Rising Women is Team 6: Code Sisters' project submission for Code Institute's Women in Technology Hackathon, March 2023.
+
+**21 March Update:**
+Rising Women won 1st Place in the recently concluded Women in Tech Hackathon organised by [Code Institute](
+https://hackathon.codeinstitute.net/showcase/122/).
+
+## Meet the Development Team
+* [Rachel O'Donnell](https://www.linkedin.com/in/rachel-o-donnell-397aa2180/)
+    * Scrum Master and Code Institute Student and expected to graduate in May 2023. *1st time as a scrum master and copywriter of the site. Grateful for this incredible opportunity to work on an all female team and to push me further out of my comfort zone and learn so much from my team members.*
+* [Eleanor Bucke](https://www.linkedin.com/in/eleanor-bucke-mehmood-38a5b6222/)
+    * Code Institute Student and expected to graduate in May 2023. *I worked on toasts, tests and front end. I loved having the chance to work with other students and learn more about working with teams and using git for version control.*
+* [Özlem Halafir](https://www.linkedin.com/in/ozlem-hafalir/)
+    * Code Institute Student and expected to graduate in July 2023. *I feel like my Bootstrap studies have paid off, and it was a good Chance to work with other brilliant women while pushing myself to learn new things that I didnt know in a mostly fun way*
+* [Joy Zadan](https://www.linkedin.com/in/joy-zadan/)
+    * Code Institute Alumna, graduated with Distinction, February 2023. *Full Stack Developer. This is my fifth hackathon but first time to work with an all women team. It's a great experience to work with truly talented and dedicated teammates*
+* [Roz Welch](https://www.linkedin.com/in/roslyn-w-2983a9/)
+    * Code Institute Student and expected to graduate in May 2023. *Design of front end, testing, and validation. Fantastic opportunity to work with such an amazing, talented team. Enjoyed the experience and learned so much!*
+* [Ivette McDermott](https://www.linkedin.com/in/ivette-mc-dermott/)
+    * Code Institute Student and expected to graduate in May 2023. *Working with a full female team was a completely different and rewarding experience.*
 
 ---
 **TABLE OF CONTENTS**
@@ -221,11 +239,12 @@ This ER diagram captures the relationships between real-world entities. The enti
 
 
 ## Skeleton Plane
-* Wireframes
-![home page](./documentation/)
-![browse mentors](https://github.com/RozWelch/rising-women/blob/roz-styling/assets/readme_images/wireframe3list.jpg)
-![mentor details](https://github.com/RozWelch/rising-women/blob/roz-styling/assets/readme_images/wireframe2bio.jpg)
-![mentor sign up](https://github.com/RozWelch/rising-women/blob/roz-styling/assets/readme_images/wireframe4mentorform.jpg)
+* ### Wireframes
+![home page](./assets/readme_images/wireframe1home.jpg)
+![browse mentors](./assets/readme_images/wireframe3list.jpg)
+![mentor details](./assets/readme_images/wireframe2bio.jpg)
+![mentor sign up](./assets/readme_images/wireframe4mentorform.jpg)
+
 * Initial Design
 [initial design spec](./documentation/rising_women_design_spec.pdf)
 ![home page](./documentation/Screenshot%202023-03-19%20at%2013.40.25.png)
@@ -237,16 +256,16 @@ This ER diagram captures the relationships between real-world entities. The enti
 * Typography
 Monserrat was selected for headings, and Atkinson Hyperlegible for body text (highly legible)
 * Colour Palette
-![fonts and colour pallet](https://github.com/RozWelch/rising-women/blob/roz-styling/assets/readme_images/initial_design_fonts_colourpallet.jpg)
+![fonts and colour pallet](./assets/readme_images/initial_design_fonts_colourpallet.jpg)
 * Imagery
 The main image, and the headshots of Mentors are from www.freepix.com, and are used for eductional purposes only
 # Agile Methodology
 ## **GitHub Projects**
 
-Find out project board here
-*[project board](https://github.com/users/rachel-o-donnell/projects/10)
+Find out project board here:
+* [project board](https://github.com/users/rachel-o-donnell/projects/10)
 
-We broke the project into 5 iterations over the course of five days
+We broke the project into 5 iterations over the course of five days.
 
 GitHub Projects was used to manage the development of the site. It helped our team to break down large issues into smaller issues and how these fit into the overall goals of implementing specific features we wanted for the site. We also used labels to distinguish the issues which are part of the setup, of the documentation, the must haves and the enhancements, and the required validations.
 
@@ -256,7 +275,7 @@ GitHub Projects was used to manage the development of the site. It helped our te
 
 # Features
 
-# Welcome to Rising Women a project put together by Code Sisters for the Code Institute Hackathon March 2023 
+# Welcome to Rising Women a project put together by Code Sisters for the Code Institute Hackathon March 2023
 
 ## Project overview/Issues tackled Info from CI HACKATHON Requirements
 
