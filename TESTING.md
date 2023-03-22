@@ -29,9 +29,12 @@
 ## Automated Testing and Validation
 ### HTML Validation
 We used [W3C Markup Validation Service](https://validator.w3.org/) to validate all the HTML files by direct input:
-| Page | Result | Validation Details & Screenshots |
-| ---- | :-: | -------------------------- |
-| index.html | [add-here-if-error-number] error and [add-here-if-warning-number] warning | [add-here-validation-image] |
+|Page | Mobile |
+| ------------- | ------------- |
+| Index | <img src=/workspace/rising-women/documentation/html_allauth.jpg width="250">|
+| Register | <img src=/workspace/rising-women/documentation/html_allauth.jpg width="250">|
+| Login | <img src=/workspace/rising-women/documentation/html_allauth.jpg width="250">|
+| Logout | <img src=/workspace/rising-women/documentation/html_allauth.jpg width="250">|
 
 ### CSS Validation
 We used [W3C CSS Validation Service](https://jigsaw.w3.org/css-validator/) to validate all CSS files by direct input.
