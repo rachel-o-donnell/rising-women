@@ -31,20 +31,20 @@
 We used [W3C Markup Validation Service](https://validator.w3.org/) to validate all the HTML files by direct input:
 |Page | Mobile |
 | ------------- | ------------- |
-| Index | <img src=/workspace/rising-women/documentation/html_allauth.jpg width="250">|
-| Register | <img src=/workspace/rising-women/documentation/html_allauth.jpg width="250">|
-| Login | <img src=/workspace/rising-women/documentation/html_allauth.jpg width="250">|
-| Logout | <img src=/workspace/rising-women/documentation/html_allauth.jpg width="250">|
+| Index | <img src=documentation/html_allauth.jpg width="250">|
+| Register | <img src=documentation/html_allauth.jpg width="250">|
+| Login | <img src=documentation/html_allauth.jpg width="250">|
+| Logout | <img src=documentation/html_allauth.jpg width="250">|
 
 ### CSS Validation
 We used [W3C CSS Validation Service](https://jigsaw.w3.org/css-validator/) to validate all CSS files by direct input.
 
 |Page | Mobile |
 | ------------- | ------------- |
-| Index | <img src=/workspace/rising-women/documentation/css_index.jpg width="250">|
-| Register | <img src=/workspace/rising-women/documentation/CSS_allauth.jpg width="250">|
-| Login | <img src=/workspace/rising-women/documentation/CSS_allauth.jpg width="250">|
-| Logout | <img src=/workspace/rising-women/documentation/CSS_allauth.jpg width="250">|
+| Index | <img src=documentation/css_index.jpg width="250">|
+| Register | <img src=documentation/CSS_allauth.jpg width="250">|
+| Login | <img src=documentation/CSS_allauth.jpg width="250">|
+| Logout | <img src=documentation/CSS_allauth.jpg width="250">|
 
 ### JavaScript Validation
 We used [JSHint](https://jshint.com/) to validate all JavaScript and JQuery files
@@ -64,7 +64,7 @@ At the project inception, we installed [PyCodeStyle](https://pycodestyle.pycqa.o
 ### <u>Lighthouse</u>
 |Page | Mobile  | Computer|
 | ------------- | ------------- |------------- |
-| Index | <img src=/workspace/rising-women/documentation/index_lighthouse_mobile.jpg width="250">| <img src=/workspace/rising-women/documentation/index_lighthouse_desktop.jpg width="250">
+| Index | <img src=documentation/index_lighthouse_mobile.jpg width="250">| <img src=documentation/index_lighthouse_desktop.jpg width="250">
 | Register |<img src="documentation/allauth_register_lighthouse_mobile.png" width="250">| <img src="documentation/allauth_register_lighthouse_desktop.png" width="250">
 | Sign In |<img src="documentation/allauth_login_lighthouse_mobile.png" width="250">| <img src="documentation/allauth_login_lighthouse_desktop.png" width="250">
 | Logout |<img src="documentation/allauth_logout_lighthouse_mobile.png" width="250">| <img src="documentation/allauth_logout_lighthouse_desktop.png" width="250">
@@ -75,9 +75,9 @@ In order to fully validate the page, we used the WAVE Chrome extension. This ena
 
 | Page | WAVE This Page Result |
 | ------------- | -------------
-| Index | <img src=/workspace/rising-women/documentation/index_wave.png width="250">|
-| Login | <img src=/workspace/rising-women/documentation/login_wave.png width="250">|
-| Logout | <img src="/workspace/rising-women/documentation/Logout_wave.png" width="250">|
+| Index | <img src=documentation/index_wave.png width="250">|
+| Login | <img src=documentation/login_wave.png width="250">|
+| Logout | <img src="documentation/Logout_wave.png" width="250">|
 
 ### Django Automated Testing
 For the automated testing, the writing and running of these tests used [Django's built in test module](https://docs.djangoproject.com/en/4.1/topics/testing/overview/). For each installed application, we created a folder called tests, added the ```__init__.py``` file and the separate files for testing the views, models and forms.
