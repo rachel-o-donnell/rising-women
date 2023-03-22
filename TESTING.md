@@ -54,9 +54,42 @@ We used [JSHint](https://jshint.com/) to validate all JavaScript and JQuery file
 
 ### Python Validation
 At the project inception, we installed [PyCodeStyle](https://pycodestyle.pycqa.org/en/latest/intro.html#configuration) in our workspace fixed errors when encountered throughout the development process. We also used [Code Institute's Python Linter](https://pep8ci.herokuapp.com/) to lint our Python code.
-| File | Result | Validation Details & Screenshots |
-| :-- | :-: | -------------------------- |
-| [add-here-py-file-name] | [add-here-if-all-clear--no-errors-found] | [add-here-validation-image] |
+
+### Contact App
+| File | Result |
+| ---- | ---- |
+| Contact Admin | <img src=documentation/python/contact_app/contactapp_admin_valid.jpg width="350">|
+| Contact App | <img src=documentation/python/contact_app/contactapp_apps_valid.jpg width="350">|
+| Contact Forms | <img src=documentation/python/contact_app/contactapp_forms_valid.jpg width="350">|
+| Contact Models | <img src=documentation/python/contact_app/contactapp_models_valid.jpg width="350">|
+| Contact URLs | <img src=documentation/python/contact_app/contactapp_urls_valid.jpg width="350">|
+| Contact Views | <img src=documentation/python/contact_app/contactapp_views_valid.jpg width="350">|
+
+### Home App
+| File | Result |
+| ---- | ---- |
+| Home Apps | <img src=documentation/python/home_app/homeapp_apps_valid.jpg width="350">|
+| Home Urls | <img src=documentation/python/home_app/homeapp_urls_valid.jpg width="350">|
+| Home Views | <img src=documentation/python/home_app/homeapp_views_valid.jpg width="350">|
+
+### Mentor App
+| File | Result |
+| ---- | ---- |
+| Mentor Admin | <img src=documentation/python/mentors/mentorsapp_admin_valid.jpg width="350">|
+| Mentor Apps | <img src=documentation/python/mentors/mentorsapp_apps_valid.jpg width="350">|
+| Mentor Models | <img src=documentation/python/mentors/mentorsapp_models_valid.jpg width="350">|
+| Mentor URLs | <img src=documentation/python/mentors/mentorsapp_urls_valid.jpg width="350">|
+| Mentor Views | <img src=documentation/python/mentors/mentorapp_views_valid.jpg width="350">|
+
+### Profiles App
+| File | Result |
+| ---- | ---- |
+| Profile Admin | <img src=documentation/python/profiles/profilesapp_admin_valid.jpg width="350">|
+| Profile Apps | <img src=documentation/python/profiles/profilesapp_apps_valid.jpg  width="350">|
+| Profile Models | <img src=documentation/python/profiles/profilesapp_models_valid.jpg  width="350">|
+| Profile URLs | <img src=documentation/python/profiles/profilesapp_urls_valid.jpg  width="350">|
+| Profile Views | <img src=documentation/python/profiles/profilesapp_views_valid.jpg  width="350">|
+
 
 ### Lighthouse Report
 [Chrome DevTools' Lighthouse](https://developer.chrome.com/docs/lighthouse/overview/) was used to test the performance, accessibility, best practices and SEO of the site
