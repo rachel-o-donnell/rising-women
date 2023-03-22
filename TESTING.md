@@ -29,15 +29,22 @@
 ## Automated Testing and Validation
 ### HTML Validation
 We used [W3C Markup Validation Service](https://validator.w3.org/) to validate all the HTML files by direct input:
-| Page | Result | Validation Details & Screenshots |
-| ---- | :-: | -------------------------- |
-| index.html | [add-here-if-error-number] error and [add-here-if-warning-number] warning | [add-here-validation-image] |
+|Page | Mobile |
+| ------------- | ------------- |
+| Index | <img src=/workspace/rising-women/documentation/html_allauth.jpg width="250">|
+| Register | <img src=/workspace/rising-women/documentation/html_allauth.jpg width="250">|
+| Login | <img src=/workspace/rising-women/documentation/html_allauth.jpg width="250">|
+| Logout | <img src=/workspace/rising-women/documentation/html_allauth.jpg width="250">|
 
 ### CSS Validation
 We used [W3C CSS Validation Service](https://jigsaw.w3.org/css-validator/) to validate all CSS files by direct input.
-| File | Result | Test Details & Screenshots |
-| ---- | :-: | -------------------------- |
-| static/css/base.css | [add-here-if-pass] | [add-here-validation-image]
+
+|Page | Mobile |
+| ------------- | ------------- |
+| Index | <img src=/workspace/rising-women/documentation/css_index.jpg width="250">|
+| Register | <img src=/workspace/rising-women/documentation/CSS_allauth.jpg width="250">|
+| Login | <img src=/workspace/rising-women/documentation/CSS_allauth.jpg width="250">|
+| Logout | <img src=/workspace/rising-women/documentation/CSS_allauth.jpg width="250">|
 
 ### JavaScript Validation
 We used [JSHint](https://jshint.com/) to validate all JavaScript and JQuery files
@@ -53,23 +60,24 @@ At the project inception, we installed [PyCodeStyle](https://pycodestyle.pycqa.o
 
 ### Lighthouse Report
 [Chrome DevTools' Lighthouse](https://developer.chrome.com/docs/lighthouse/overview/) was used to test the performance, accessibility, best practices and SEO of the site
-#### Desktop
+
 ### <u>Lighthouse</u>
 |Page | Mobile  | Computer|
 | ------------- | ------------- |------------- |
-| Index | <img src="documentation/index_lighthouse_mobile.png" width="250">| <img src="documentation/index_lighthouse_desktop.png" width="250">
+| Index | <img src=/workspace/rising-women/documentation/index_lighthouse_mobile.jpg width="250">| <img src=/workspace/rising-women/documentation/index_lighthouse_desktop.jpg width="250">
 | Register |<img src="documentation/allauth_register_lighthouse_mobile.png" width="250">| <img src="documentation/allauth_register_lighthouse_desktop.png" width="250">
 | Sign In |<img src="documentation/allauth_login_lighthouse_mobile.png" width="250">| <img src="documentation/allauth_login_lighthouse_desktop.png" width="250">
 | Logout |<img src="documentation/allauth_logout_lighthouse_mobile.png" width="250">| <img src="documentation/allauth_logout_lighthouse_desktop.png" width="250">
-| Add A Post |<img src="markdown/maddapost.png" width="250"> |<img src="markdown/caddapost.png" width="250">
+|
 
 
 In order to fully validate the page, we used the WAVE Chrome extension. This enabled our team to test the pages that require user authentication.
 
-| Page | WAVE This Page Result | Reasons for not fixing the contrast errors, if any |
-| Index | <img src="documentation/index_wave.png" width="250">|
-| Index | <img src="documentation/login_wave.png" width="250">|
-| Index | <img src="documentation/logout_wave.png" width="250">|
+| Page | WAVE This Page Result |
+| ------------- | -------------
+| Index | <img src=/workspace/rising-women/documentation/index_wave.png width="250">|
+| Login | <img src=/workspace/rising-women/documentation/login_wave.png width="250">|
+| Logout | <img src="/workspace/rising-women/documentation/Logout_wave.png" width="250">|
 
 ### Django Automated Testing
 For the automated testing, the writing and running of these tests used [Django's built in test module](https://docs.djangoproject.com/en/4.1/topics/testing/overview/). For each installed application, we created a folder called tests, added the ```__init__.py``` file and the separate files for testing the views, models and forms.
